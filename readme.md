@@ -4,3 +4,6 @@
 
 ## 👉 `npm run dev`
 * live-server & compile SCSS
+
+## Link github
+* `https://buitantoan.github.io/training-web/` 
