@@ -12,7 +12,37 @@ body{
     width: 100%;
     
 }
+//buton get start now
+.__btn-get-start-now{
+    background-color:  #7567F8;
+    padding: 23px 39px;
+    border: 1px solid #7567F8;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 160.2%;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+}
+// enquire now
+.__enquire-now{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 160.2%;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: #7567F8;
+    margin: 0 72px;
 
+    &::after{
+        content: "\f0da";
+        font-family: FontAweSome;
+        margin-left: 4px;
+    }
+}
+//
 header{
     position: fixed;
     z-index: 99;
@@ -275,36 +305,7 @@ header{
                     font-family: DM Sans;
                     display: flex;
                     align-items: center;
-          
-
-                        button{
-                            background-color:  #7567F8;
-                            padding: 23px 40px;
-                            border: 1px solid #7567F8;
-                            outline: none;
-                            color: white;
-                            font-weight: bold;
-                            font-size: 14px;
-                            line-height: 160.2%;
-                            letter-spacing: 0.19em;
-                            text-transform: uppercase;
-                        }
-                        a{
-                            text-decoration: none;
-                            font-weight: bold;
-                            font-size: 14px;
-                            line-height: 160.2%;
-                            letter-spacing: 0.19em;
-                            text-transform: uppercase;
-                            color: #7567F8;
-                            margin: 0 72px;
-
-                            &::after{
-                                content: "\f0da";
-                                font-family: FontAweSome;
-                                margin-left: 5px;
-                            }
-                        }
+                      
                 }
 
                 .__social{
@@ -352,6 +353,8 @@ header{
 .__services{
     padding-top: 70px;
     width: 100%;
+
+
     .__service{
         width: $wrap;
         margin: 0 auto;
@@ -421,4 +424,295 @@ header{
     }
 }
 
+//digital plan
+.__digital-plans{
+    background-image: url(../images/section-bg02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -110px;
+    padding-top: 260px ;
+        .__digital-plan{
+            padding: 0;
+            background-color: rgba(0,0,0,0.1) ;
+
+                .__digital-wrap{
+                    width: $wrap;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 15px;
+                    padding: 125px 15px;
+
+                        .__digital-main{
+                           font-family: 'DM Sans'; 
+
+                            .__digital-title{
+
+                                p{
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                    line-height: 142.2%;
+                                    /* or 21px */
+                                    letter-spacing: 0.435em;
+                                    text-transform: uppercase;
+                                    color: #7567F8;
+                                }
+                                h2{
+                                    font-weight: bold;
+                                    font-size: 36px;
+                                    line-height: 47px;
+                                    /* identical to box height */
+                                    color: #222222;
+
+                                }
+                            }
+
+                            .__digital-content{
+                                margin: 18px 0 57px 0;
+
+                                    p{
+                                        font-size: 18px;
+                                        line-height: 160.2%;
+                                        /* or 29px */
+                                        color: #555555;
+                                    }
+                                    p:first-child{
+                                        margin-bottom: 20px;
+                                    }
+                            }
+
+                            .__digital-get-now{
+                                display: flex;
+                                align-items: center;
+
+                            }
+                        }
+                        .__digital-mask{
+
+                            background-image: url(../images/img_digital/iStock-1201765831-1024x683-1.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+
+                            .__digital-video{
+                                width: 100%;
+                                display: flex;
+                                align-items: flex-end;
+                                height: 100%;
+
+                                .__digital-start{
+                                    display: flex;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    padding: 63px 86px;
+    
+                                    button{
+                                        background-color: transparent;
+                                        border: none;
+                                        outline: none;
+                                    }
+                                    p{
+                                        font-weight: bold;
+                                        font-size: 30px;
+                                        line-height: 128.7%;
+                                        /* or 39px */
+                                        color: #FFFFFF;
+                                    }
+                                }
+                            }
+                            
+                        }
+                }
+        }
+}
+
+//Funfacts
+.__funfacts{
+    display: flex;
+    flex-wrap: wrap;
+
+        .__funfacts-conversation{
+            background: #6253EE;
+           
+        }
+        .__funfacts-traffic{
+            background: #7567F8;
+        }
+        .__funfacts-revenue{
+            
+            background: #6253EE;
+        }
+        .__funfact-item{
+            flex: 1 33%;
+            padding: 93px 0;
+            text-align: center;
+
+            p:nth-child(1){
+                font-weight: bold;
+                font-size: 80px;
+                line-height: 89.5%;
+                /* identical to box height, or 72px */
+                color: #FFFFFF;
+                margin-bottom: 19px;
+            }
+            p:nth-child(2){
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 129%;
+                /* identical to box height, or 31px */
+                color: #FFFFFF;
+                margin-bottom: 3px;
+            }
+            p:nth-child(3){
+                font-size: 16px;
+                line-height: 129%;
+                /* identical to box height, or 21px */
+                color: #FFFFFF;
+
+            }
+        }
+
+}
+// our work
+.__our-work{
+    background-image: url(../images/section-bg02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+        .__our-work-wrap{
+            width: $wrap;
+            margin: 0 auto;
+            padding: 128px 0 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+                .__our-work-title{
+                    margin-bottom: 48px;
+
+                    p{
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 142.2%;
+                        /* or 21px */
+                        letter-spacing: 0.435em;
+                        text-transform: uppercase;
+                        color: #7567F8;
+                    }
+                    h2{
+                        font-weight: bold;
+                        font-size: 36px;
+                        line-height: 47px;
+                        /* identical to box height */
+                        color: #222222;
+
+                    }
+                }
+
+                .__our-work-main{
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    
+                        .__our-work-content{
+                            flex: 1 calc(33% - 30px);
+                            margin: 15px;
+
+                                .__our-work-img{
+                                    width: 100%;
+
+                                        img{
+                                            width: 100%;
+                                            object-fit: cover;
+                                        }
+                                }
+                                .__our-work-meta{
+                                    padding: 29px;
+
+                                        a{
+                                            margin-bottom: 3px;
+                                            text-decoration: none;
+                                            font-weight: bold;
+                                            font-size: 22px;
+                                            line-height: 133.2%;
+                                            /* or 29px */
+                                            color: #222222;
+
+                                        }
+                                        p{
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 153.7%;
+                                            /* identical to box height, or 25px */
+                                            color: #555555;
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+//Reviews
+.__reviews{
+    background: #F4F4F4;
+
+        .__review-wrap{
+            width: $wrap;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 117px 0;
+
+                .__review-title{
+
+                    p{
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 142.2%;
+                        /* or 21px */
+                        letter-spacing: 0.435em;
+                        text-transform: uppercase;
+                        color: #7567F8;
+                    }
+                    h2{
+                        font-weight: bold;
+                        font-size: 36px;
+                        line-height: 47px;
+                        /* identical to box height */
+                        color: #222222;
+
+                    }
+                }
+
+                .__review-slider{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                        .__review-slide-item{
+                            flex: 1 calc(50% - 30px);
+                                margin: 15px;
+
+                            .__review-item{   
+                                padding: 50px 60px 44px;                             
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+
+                                .__review-img{
+                                    flex: 1 20%;
+
+                                    img{
+                                        border-radius: 50%;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                .__review-meta{
+                                    flex: 1 80%;
+                                }
+                            }
+                        }
+                }
+        }
+}
    
