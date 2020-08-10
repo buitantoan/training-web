@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 $wrap: 80%;
+$XL : 1170px;
+$break-small-phone: 320px;
+$break-media-phone: 375px;
+$break-large-phone: 480px;
+$break-small-tablet: 600px;
+$break-large-tablet: 768px;
+$break-small-laptop: 860px;
+$break-media-laptop: 1024px;
+$break-large-laptop: 1200px;
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -15,7 +25,10 @@ body{
 //buton get start now
 .__btn-get-start-now{
     background-color:  #7567F8;
-    padding: 23px 39px;
+    width: 209px;
+    height: 68px;
+    text-align: center;
+    // padding: 23px 39px;
     border: 1px solid #7567F8;
     outline: none;
     color: white;
@@ -76,6 +89,7 @@ header{
 
                         img{
                             margin: 0 8px 0 46px;
+                            cursor: pointer;
                         }
                         .call{
                             display: flex;
@@ -223,6 +237,7 @@ header{
 
             img{
                 object-fit: cover;
+                cursor: pointer;
             }
         }
     }
@@ -274,6 +289,7 @@ header{
                         img{
                             width: 100%;
                             object-fit: cover;
+                            cursor: pointer;
                         }
                 }
                 .__content_title{
@@ -288,7 +304,7 @@ header{
                             text-transform: uppercase;
                         }
                         h2{
-                            font-size: 36px;
+                            font-size: 46px;
                             color: #222222;
                             line-height: 142.2%;
 
@@ -347,6 +363,10 @@ header{
         .__mouse{
             grid-area: __mouse;
             text-align: center;
+
+            img{
+                cursor: pointer;
+            }
         }
     }
 }
@@ -356,7 +376,8 @@ header{
 
 
     .__service{
-        width: $wrap;
+        width: 100%;
+        max-width: $XL;
         margin: 0 auto;
 
             .__s-title{
@@ -374,7 +395,7 @@ header{
                     h2{
                         color: #222222;
                         font-weight: bold;
-                        font-size: 36px;
+                        font-size: 46px;
                         line-height: 114.5%;
                     }
             }
@@ -395,6 +416,7 @@ header{
                             position: relative;
                             top: -10px;
                             object-fit: cover;
+                            cursor: pointer;
                         }
                     }
                     .__s-content{
@@ -436,7 +458,8 @@ header{
             background-color: rgba(0,0,0,0.1) ;
 
                 .__digital-wrap{
-                    width: $wrap;
+                    width: 100%;
+                    max-width: $XL;
                     margin: 0 auto;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
@@ -459,7 +482,7 @@ header{
                                 }
                                 h2{
                                     font-weight: bold;
-                                    font-size: 36px;
+                                    font-size: 46px;
                                     line-height: 47px;
                                     /* identical to box height */
                                     color: #222222;
@@ -579,7 +602,8 @@ header{
     background-size: contain;
 
         .__our-work-wrap{
-            width: $wrap;
+            width: 100%;
+            max-width: $XL;
             margin: 0 auto;
             padding: 128px 0 120px;
             display: flex;
@@ -588,6 +612,7 @@ header{
 
                 .__our-work-title{
                     margin-bottom: 48px;
+                    text-align: center;
 
                     p{
                         font-weight: 500;
@@ -600,7 +625,7 @@ header{
                     }
                     h2{
                         font-weight: bold;
-                        font-size: 36px;
+                        font-size: 46px;
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
@@ -623,6 +648,7 @@ header{
                                         img{
                                             width: 100%;
                                             object-fit: cover;
+                                            cursor: pointer;
                                         }
                                 }
                                 .__our-work-meta{
@@ -656,7 +682,8 @@ header{
     background: #F4F4F4;
 
         .__review-wrap{
-            width: $wrap;
+            width: 100%;
+            max-width: $XL;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -664,6 +691,8 @@ header{
             padding: 117px 0;
 
                 .__review-title{
+                    margin-bottom: 49px;
+                    text-align: center;
 
                     p{
                         font-weight: 500;
@@ -676,7 +705,7 @@ header{
                     }
                     h2{
                         font-weight: bold;
-                        font-size: 36px;
+                        font-size: 46px;
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
@@ -688,31 +717,516 @@ header{
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
+
                         .__review-slide-item{
                             flex: 1 calc(50% - 30px);
-                                margin: 15px;
+                            margin: 15px;
+                            background-color: white;
 
                             .__review-item{   
                                 padding: 50px 60px 44px;                             
                                 display: flex;
-                                flex-direction: row;
-                                flex-wrap: wrap;
+                                flex-direction: row;                             
+                            
 
                                 .__review-img{
-                                    flex: 1 20%;
+                                  
+                                   margin-right: 30px;
 
                                     img{
+                                        cursor: pointer;
                                         border-radius: 50%;
                                         object-fit: cover;
                                     }
                                 }
 
                                 .__review-meta{
-                                    flex: 1 80%;
+                                   display: flex;
+                                   flex-direction: column;
+                                        
+                                    .__review-meta-info{
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        margin-top: 24px;
+                                            .__review-meta-info-name{
+
+                                                a{
+                                                    text-decoration: none;
+                                                    color: #222222;
+                                                    font-weight: bold;
+                                                    font-size: 20px;
+                                                    line-height: 133.2%;
+
+                                                    span{
+                                                        font-weight: 500;
+                                                        font-size: 13px;
+                                                        line-height: 153.7%;
+                                                        /* identical to box height, or 20px */
+                                                        text-transform: uppercase;
+                                                        color: #7567F8;
+                                                    }
+                                                }
+                                            }
+                                            
+                                            .__review-meta-info-star{
+                                                display: flex;
+                                                i{
+                                                    font-weight: 900;
+                                                    font-size: 13px;
+                                                    line-height: 133.2%;
+                                                    /* or 17px */
+                                                    color: #D7DB17;
+                                                }
+                                            }
+                                    }
                                 }
                             }
                         }
                 }
         }
 }
-   
+// Meet team work
+
+.__teams{
+    background-image: url(../images/section-bg03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+        .__team-wrap{
+            width: 100%;
+            max-width: $XL;
+            padding: 116px 0;
+            margin: 0 auto;
+            text-align: center;
+
+                .__team-title{
+                    margin-bottom: 60px;
+
+                    p{
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 142.2%;
+                        /* or 21px */
+                        letter-spacing: 0.435em;
+                        text-transform: uppercase;
+                        color: #7567F8;
+                    }
+                    h2{
+                        font-weight: bold;
+                        font-size: 46px;
+                        line-height: 47px;
+                        /* identical to box height */
+                        color: #222222;
+
+                    }
+                }
+
+                .__team-work{
+                    display: flex;
+                    flex-direction: row wrap;
+
+                        .__team-info{
+                            flex: 1 calc(25% - 30px);
+                            margin: 15px;
+
+                                .__team-img{
+                                    width: 100%;
+
+                                    img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .__team-meta{
+                                    margin-top: 28px;
+                                    text-align: left;
+                                    a{
+                                        margin-bottom: 4px;
+                                        text-decoration: none;
+                                        font-weight: bold;
+                                        font-size: 24px;
+                                        line-height: 133.2%;
+                                        /* or 29px */
+                                        color: #222222;
+
+                                    }
+                                    p{
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 153.7%;
+                                        /* identical to box height, or 25px */
+                                        text-transform: uppercase;
+                                        color: #7567F8;
+                                    }
+                                }
+                        }
+                }
+        }
+}
+
+//Ready
+.__readys{
+    // background-image:  url(../images/img_ready/bg-ready.png);
+    background-image: linear-gradient(#F4F4F4,#F4F4F4 ),url(../images/img_ready/bg-ready.png);
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+
+    .__ready-wrap{       
+        width: 100%;
+        max-width: $XL;
+        margin: 0 auto;
+
+        .__ready-main{         
+            display: flex;
+            flex-direction: row;          
+            padding: 63px 0 52px;
+            justify-content: space-between;
+            align-items: center;
+
+                .__ready-team{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    
+
+                    .__ready-img{
+                        width: 112px;
+                        height: 112px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 50%;
+                        margin-right: 35px;
+                        img{                     
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .__ready-title{
+    
+                        h2{
+                            font-weight: bold;
+                            font-size: 46px;
+                            line-height: 128.7%;
+                            /* or 51px */
+                            color: #222222;
+                        }
+                        p{
+                            font-size: 18px;
+                            line-height: 160.2%;
+                            /* identical to box height, or 29px */
+                            color: #555555;
+    
+                        }
+                    }
+                }
+                
+                
+                .__ready-now{
+
+                    a{
+                        padding: 23px 48px;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 160.2%;
+                        /* or 22px */
+                        text-transform: uppercase;
+                        color: #7567F8;
+                        border: 5px solid #7567F8;
+                        margin-right: 17px;
+                    }
+                }
+        }
+    }
+}
+
+//Pricing
+.__pricing-plans{
+    background-image: url(../images/section-bg03.png);
+    background-repeat: no-repeat;
+
+        .__pricing-wrap{
+            width: 100%;
+            max-width: $XL;
+            margin: 0 auto;
+            text-align: center;
+            padding: 116px 0 121px;
+
+                .__pricing-titile{
+                    margin-bottom: 59px;
+
+                    p{
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 114.5%;
+                        /* or 21px */
+                        letter-spacing: 0.225em;
+                        text-transform: uppercase;
+                        color: #7567F8;
+                    }
+                    h2{
+                        font-weight: bold;
+                        font-size: 46px;
+                        line-height: 47px;
+                        /* identical to box height */
+                        color: #222222;
+
+                    }
+                }
+
+                .__pricing-main{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    
+                        ._pricing-content{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            text-align: left;
+                            flex: 1 calc(33% - 30px);
+                            margin: 15px;
+                            padding: 43px 70px 59px;
+                            border: 5px solid #7567F8;
+
+                            @media screen and (max-width: $break-large-laptop){
+                                padding: 40px 50px;
+                            }
+                           
+                                .__pricing-money{
+                                    // margin-bottom: 35px;
+
+                                    p:nth-child(1){
+                                        font-size: 24px;
+                                        
+                                        span{
+                                            font-weight: bold;
+                                            font-size: 36px;
+                                            line-height: 133.2%;   
+                                                                           
+                                        }
+                                    }
+                                    p:nth-child(2){
+                                        font-weight: bold;
+                                        font-size: 14px;
+                                        line-height: 160.2%;
+                                        /* or 22px */
+                                        letter-spacing: 0.585em;
+                                        text-transform: uppercase;
+                                        color: #7567F8;
+                                    }
+                                    p:nth-child(3){
+                                        font-size: 24px;                                     
+                                        font-weight: bold;
+                                        line-height: 133.2%;   
+                                        color: #222222;
+                                    }
+                                }
+                                .__pricing-service{
+                                    margin: 35px 0 80px;
+
+                                        p{
+                                            font-size: 16px;
+                                            line-height: 216.7%;
+
+                                            &::before{
+                                                content: '\f152 ';
+                                                position: relative;
+                                                font-family: FontAweSome;
+                                                color: #7567F8;
+                                                margin-right: 10px;
+                                                font-size: 18px;
+                                            }
+                                        }
+                                }
+                                .__pricing-now{
+                                    display: flex;
+                                    align-items: flex-end;
+                                    
+                                }
+                        }
+                        .__pricing-middle{
+                            background-color: #7567F8;
+                            color: white;
+
+                                .__pricing-money{
+
+                                    p:nth-child(2){
+                                        color: white;
+                                    }
+                                    p:nth-child(3){
+                                        color: white;
+                                    }
+                                }
+                                .__pricing-service{
+                                        p{
+                                            font-size: 16px;
+                                            line-height: 216.7%;
+
+                                            &::before{
+                                                content: '\f152 ';
+                                                position: relative;
+                                                font-family: FontAweSome;
+                                                color: white;
+                                                margin-right: 10px;
+                                                
+                                            }
+                                        }
+                                }
+                                .__pricing-now{
+
+                                    button{
+                                        border: 3px solid #FFFFFF;
+                                    }
+                                }
+                        }
+                }
+        }
+}
+// Recent blog posts
+.__recent-posts{
+    background: #F4F4F4;
+
+    .__recent-wrap{
+        width: 100%;
+        max-width: $XL;
+        margin: 0 auto;
+        text-align: center;
+        padding: 120px 0;
+
+            .__recent-title{
+                margin-bottom: 51px;
+
+                p{
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 114.5%;
+                    /* or 21px */
+                    letter-spacing: 0.225em;
+                    text-transform: uppercase;
+                    color: #7567F8;
+                }
+                h2{
+                    font-weight: bold;
+                    font-size: 46px;
+                    line-height: 47px;
+                    /* identical to box height */
+                    color: #222222;
+
+                }
+            }
+
+            .__recent-post{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                    .__recent-post-main{
+                        flex: 1 calc(50% - 30px);
+                        margin: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                            .__recent-img{
+                                width: 100%;
+                                position: relative;
+
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .__recent-post-content{
+                                background-color: rgba(0,0,0,0.5);
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                padding: 46px 48px 66px 75px;
+
+                                    .__recent-marketing{                                      
+                                        align-self: flex-end;
+
+                                        .__btn-recent-marketing{
+                                            width: 121px;
+                                            height: 36px;
+                                            font-weight: bold;
+                                            font-size: 13px;
+                                            line-height: 132.7%;
+                                            /* or 17px */
+                                            text-transform: uppercase;
+                                            color: #FFFFFF;
+                                            background: #7567F8;
+                                            outline: none;
+                                            border: 1px solid #7567F8;
+                                        }
+                                    }
+                                    .__recent-meta{
+                                        text-align: left;
+
+                                        .__recent-post-date{
+                                            align-self: flex-start;
+                                            
+                                                p{
+                                                    color: #FFFFFF;
+                                                    font-size: 16px;
+                                                    line-height: 132.7%;
+
+                                                    &::before{
+                                                        content: '\f073';
+                                                        font-family: FontAweSome;
+                                                        color: #7567F8;
+                                                        font-size: 16;
+                                                        margin-right: 5px;
+                                                    }
+                                                }
+                                        }
+
+                                        h2{
+                                            font-weight: bold;
+                                            font-size: 30px;
+                                            line-height: 132.7%;
+                                            /* or 40px */
+                                            color: #FFFFFF; 
+                                            margin-bottom: 17px;                                         
+                                        }
+                                        .__recent-author{
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-items: center;
+
+                                                img{
+                                                    border-radius: 50%;
+                                                    object-fit: cover;
+                                                    margin-right: 11px;
+                                                }
+                                                p{
+                                                    font-weight: bold;
+                                                    font-size: 16px;
+                                                    line-height: 132.7%;
+                                                    color: #FFFFFF; 
+                                                }
+                                        }
+                                    }
+                            }
+                    }
+            }
+
+            .__recent-now{
+                margin-top: 70px;
+            }
+    }
+}
