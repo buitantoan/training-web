@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
-$wrap: 80%;
+$wrap: 90%;
 $XL : 1170px;
 $break-small-phone: 320px;
 $break-media-phone: 375px;
@@ -9,7 +9,7 @@ $break-small-tablet: 600px;
 $break-large-tablet: 768px;
 $break-small-laptop: 860px;
 $break-media-laptop: 1024px;
-$break-large-laptop: 1200px;
+$break-large-laptop: 1440px;
 
 *{
     box-sizing: border-box;
@@ -186,7 +186,7 @@ header{
             }
             .h-right{
                 position: relative;
-                flex-basis: 38%;
+                flex-basis: 39%;
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
@@ -373,7 +373,7 @@ header{
 
 
     .__service{
-        width: 80%;
+        width: $wrap;
         max-width: $XL;
         margin: 0 auto;
 
@@ -455,7 +455,7 @@ header{
             background-color: rgba(0,0,0,0.1) ;
 
                 .__digital-wrap{
-                    width: 80%;
+                    width: $wrap;
                     max-width: $XL;
                     margin: 0 auto;
                     display: grid;
@@ -599,7 +599,7 @@ header{
     background-size: contain;
 
         .__our-work-wrap{
-            width: 80%;
+            width: $wrap;
             max-width: $XL;
             margin: 0 auto;
             padding: 128px 0 120px;
@@ -679,7 +679,7 @@ header{
     background: #F4F4F4;
 
         .__review-wrap{
-            width: 80%;
+            width: $wrap;
             max-width: $XL;
             margin: 0 auto;
             display: flex;
@@ -792,7 +792,7 @@ header{
     background-repeat: no-repeat;
 
         .__team-wrap{
-            width: 80%;
+            width: $wrap;
             max-width: $XL;
             padding: 116px 0;
             margin: 0 auto;
@@ -873,7 +873,7 @@ header{
     background-blend-mode: hard-light;
 
     .__ready-wrap{       
-        width: 80%;
+        width: $wrap;
         max-width: $XL;
         margin: 0 auto;
 
@@ -948,7 +948,7 @@ header{
     background-repeat: no-repeat;
 
         .__pricing-wrap{
-            width: 80%;
+            width: $wrap;
             max-width: $XL;
             margin: 0 auto;
             text-align: center;
@@ -1089,7 +1089,7 @@ header{
     background: #F4F4F4;
 
     .__recent-wrap{
-        width: 80%;
+        width: $wrap;
         max-width: $XL;
         margin: 0 auto;
         text-align: center;
