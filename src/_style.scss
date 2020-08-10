@@ -63,7 +63,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid  #EAEAEA;
+    border: 1px solid #eaeaea;
 
     .wrap-header{
         flex-basis: 94%;
@@ -71,7 +71,7 @@ header{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        background: white;
+        background: #fff;
         height: 98px;
         // align-self: baseline;
             .h-left{
@@ -95,6 +95,7 @@ header{
                             display: flex;
                             flex-direction: column;
                             align-items: center;
+
                             p:first-child{
                                 color: #7567F8;
                                 font-weight: bold;
@@ -123,12 +124,10 @@ header{
                             background: #EAEAEA;
                         }
                 }
-                .h-l-item:nth-child(3){                 
-             
+                .h-l-item:nth-child(3){                              
                     display: flex;
                     align-items: center;
                   
-
                         p{
                             letter-spacing: 0.05em;
                             text-transform: uppercase;
@@ -204,10 +203,8 @@ header{
 
                             form{
                                 display: flex;
-                                align-items: flex-start;
-                                
-                                    
-                                
+                                align-items: flex-start;                            
+                                                                   
                             }
                             
                     }
@@ -1229,4 +1226,105 @@ header{
                 margin-top: 70px;
             }
     }
+}
+// Digital marketing
+.__digital-marketing{
+    background: #7567F8;
+
+        .__digital-marketing-wrap{
+            width: 100%;
+            max-width: $XL;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 120px 0;
+
+                .__digital-marketing-advanted{
+                    flex: 1 calc(50% - 30px);
+                    display: flex;
+                    flex-direction: column;
+                }
+                .__digital-marketing-join{
+                    flex: 1 calc(50% - 30px);
+                    display: flex;
+                    flex-direction: column;
+                  
+                        form{
+                            background-color: white;
+                            max-width:  470px;
+                            margin: 0 auto;
+                            padding: 43px 46px 46px;
+                            border-radius: 5px;
+
+                                .__form-marketing-title{
+                                    text-align: center;
+                                    margin-bottom: 18px;
+
+                                        h2{
+                                            font-weight: bold;
+                                            font-size: 34px;
+                                            line-height: 128.7%;
+                                            /* identical to box height, or 44px */
+                                            color: #222222;
+                                        }
+                                        p{
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 128.7%;
+                                            /* identical to box height, or 18px */
+                                            letter-spacing: 0.175em;
+                                            text-transform: uppercase;
+                                            color: #7567F8;
+
+                                        }
+                                }
+                                .__form-marketing{
+                                    width: 100%;
+                                    margin: 10px 0;
+                                        
+                                        .__input-control{
+                                            width: 100%;
+                                            padding: 20px 30px;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 128.7%;
+                                            /* identical to box height, or 18px */
+                                            color: #999999;
+                                            background: #F7F5F5;
+                                            border: 1px solid #F7F5F5 ;
+                                            outline: none;
+                                        }
+                                        .submit{
+                                            font-weight: bold;
+                                            font-size: 15px;
+                                            line-height: 160.2%;
+                                            /* identical to box height, or 24px */
+                                            text-transform: uppercase;
+                                            color: #FFFFFF;
+                                            background: #7567F8;
+                                            border: 1px solid #7567F8 ;
+                                        }
+                                }
+                                .__form-marketing-name{
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    grid-gap: 10px;
+
+                                        input{
+                                            width: 100%;
+                                            padding: 20px 30px;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 128.7%;
+                                            /* identical to box height, or 18px */
+                                            color: #999999;
+                                            background: #F7F5F5;
+                                            outline: none;
+                                            border: 1px solid #F7F5F5 ;
+                                        }
+                                }
+                        }
+                }
+        }
 }
