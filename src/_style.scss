@@ -37,6 +37,7 @@ body{
     line-height: 160.2%;
     letter-spacing: 0.19em;
     text-transform: uppercase;
+    cursor: pointer;
 }
 // enquire now
 .__enquire-now{
@@ -301,7 +302,7 @@ header{
                             text-transform: uppercase;
                         }
                         h2{
-                            font-size: 46px;
+                            font-size: 44px;
                             color: #222222;
                             line-height: 142.2%;
 
@@ -392,7 +393,7 @@ header{
                     h2{
                         color: #222222;
                         font-weight: bold;
-                        font-size: 46px;
+                        font-size: 44px;
                         line-height: 114.5%;
                     }
             }
@@ -479,7 +480,7 @@ header{
                                 }
                                 h2{
                                     font-weight: bold;
-                                    font-size: 46px;
+                                    font-size: 44px;
                                     line-height: 47px;
                                     /* identical to box height */
                                     color: #222222;
@@ -529,6 +530,7 @@ header{
                                         background-color: transparent;
                                         border: none;
                                         outline: none;
+                                        cursor: pointer;
                                     }
                                     p{
                                         font-weight: bold;
@@ -622,7 +624,7 @@ header{
                     }
                     h2{
                         font-weight: bold;
-                        font-size: 46px;
+                        font-size: 44px;
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
@@ -702,7 +704,7 @@ header{
                     }
                     h2{
                         font-weight: bold;
-                        font-size: 46px;
+                        font-size: 44px;
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
@@ -812,7 +814,7 @@ header{
                     }
                     h2{
                         font-weight: bold;
-                        font-size: 46px;
+                        font-size: 44px;
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
@@ -908,7 +910,7 @@ header{
     
                         h2{
                             font-weight: bold;
-                            font-size: 46px;
+                            font-size: 44px;
                             line-height: 128.7%;
                             /* or 51px */
                             color: #222222;
@@ -968,7 +970,7 @@ header{
                     }
                     h2{
                         font-weight: bold;
-                        font-size: 46px;
+                        font-size: 44px;
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
@@ -1109,7 +1111,7 @@ header{
                 }
                 h2{
                     font-weight: bold;
-                    font-size: 46px;
+                    font-size: 44px;
                     line-height: 47px;
                     /* identical to box height */
                     color: #222222;
@@ -1169,6 +1171,7 @@ header{
                                             background: #7567F8;
                                             outline: none;
                                             border: 1px solid #7567F8;
+                                            cursor: pointer;
                                         }
                                     }
                                     .__recent-meta{
@@ -1244,6 +1247,63 @@ header{
                     flex: 1 calc(50% - 30px);
                     display: flex;
                     flex-direction: column;
+
+                        .__digital-marketing-title{
+                            margin: 20px 0;
+
+                                p{
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                    line-height: 142.2%;
+                                    /* or 21px */
+                                    letter-spacing: 0.435em;
+                                    text-transform: uppercase;
+                                    color: #FFFFFF;
+                                    margin-bottom: 8px;
+                                }
+                                h2{
+                                    font-weight: bold;
+                                    font-size: 44px;
+                                    line-height: 50px;
+                                    /* identical to box height */
+                                    color: #FFFFFF;
+                                }
+                        }
+
+                        .__digital-marketing-content{
+                            margin-bottom: 30px;
+                                p{
+                                    font-size: 18px;
+                                    line-height: 160.2%;
+                                    /* or 29px */
+                                    color: #FFFFFF;
+                                }
+                        }
+
+                        .__digital-marketing-agv{
+                            margin-bottom: 60px;
+
+                            p{
+                                font-size: 18px;
+                                line-height: 160.2%;
+                                /* or 29px */
+                                color: #FFFFFF;
+
+                                &::before{
+                                    content: '\f00c ';
+                                    font-family: FontAweSome;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                        .__digital-marketing-now{
+                            
+                            button{
+                                border: 4px solid #FFFFFF;
+                                cursor: pointer;
+                            }
+                        }
                 }
                 .__digital-marketing-join{
                     flex: 1 calc(50% - 30px);
@@ -1259,7 +1319,7 @@ header{
 
                                 .__form-marketing-title{
                                     text-align: center;
-                                    margin-bottom: 18px;
+                                    margin-bottom: 23px;
 
                                         h2{
                                             font-weight: bold;
@@ -1267,6 +1327,7 @@ header{
                                             line-height: 128.7%;
                                             /* identical to box height, or 44px */
                                             color: #222222;
+                                            margin-bottom: 6px;
                                         }
                                         p{
                                             font-weight: 500;
@@ -1304,6 +1365,7 @@ header{
                                             color: #FFFFFF;
                                             background: #7567F8;
                                             border: 1px solid #7567F8 ;
+                                            cursor: pointer;
                                         }
                                 }
                                 .__form-marketing-name{
@@ -1326,5 +1388,156 @@ header{
                                 }
                         }
                 }
+        }
+}
+
+//footer
+footer{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+        .__bg-infomation-us{
+            width: 100%;
+            background-image: linear-gradient(#F4F4F4,rgba(255,255,255,0.7) ),url(../images/cambioGenerazionale-bg-footer.png);
+            background-repeat: no-repeat,no-repeat;
+            background-size: cover;
+            background-blend-mode: hard-light;
+            padding: 82px 0 90px;
+            
+            
+            .__infomation-us{
+                max-width: $XL;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            
+                .__logo{
+                    display: flex;
+
+                    p{
+                        margin: 0;
+                    }
+                    p:first-child{
+                        font-weight: bold;
+                        font-size: 36px;
+                        line-height: 47px;
+                        position: relative;
+
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background: #7567F8;
+                            bottom: 10px;
+                            right:  -15px;
+                        }
+                    }
+                    p:last-child{
+                        margin-left: 30px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 114.2%;
+                        /* or 16px */
+                        letter-spacing: 0.315em;
+                        text-transform: uppercase;
+                        color: #999999;
+                    }
+                }
+                p{
+                    max-width: 540px;
+                    margin: 21px 0 35px;
+                    font-family: DM Sans;
+                    font-size: 18px;
+                    line-height: 160.2%;
+                    /* or 29px */
+                    text-align: center;
+                    color: #555555;
+                }
+                .__links{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+                    grid-gap: 30px;
+                        .__link{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                                a{
+                                    text-decoration: none;
+                                    font-size: 16px;
+                                    line-height: 239.23%;
+                                    /* or 38px */
+                                    color: #222222;
+                                    &::before{
+                                        content: '\f054 ';
+                                        font-family: FontAweSome;
+                                        margin-right: 8px;
+                                        color: #222222;
+                                    }
+                                    &:hover{
+                                        color: #7567F8;
+                                        &::before{
+                                            color: #7567F8;
+                                        }
+                                    }
+                                }
+                        }
+                        .__newsletter{
+                            text-align: left;
+
+                            h4{
+                                font-weight: bold;
+                                font-size: 24px;
+                                line-height: 31px;
+                                color: #7567F8;
+                                margin-bottom: 17px;
+                            }
+                            div{
+                                position: relative;
+                                input{
+                                    width: 100%;
+                                    padding: 19px 30px;
+                                    background: #FFFFFF;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 128.7%;
+                                    color: #999999;
+                                    outline: none;
+                                    border: 1px solid #999999;
+                                    position: relative;
+                                }
+                                span{
+                                    position: absolute;
+                                    height: 100%;
+                                    top: 80%;
+                                    right: 10%;
+                                    transform: translate(0,-46%);
+                                }
+                                
+                                .btn-newsletter{
+                                    margin-top: 18px;
+                                    background: #7567F8;
+                                    font-weight: bold;
+                                    font-size: 15px;
+                                    line-height: 160.2%;
+                                    /* identical to box height, or 24px */
+                                    text-transform: uppercase;
+                                    color: #FFFFFF;
+                                    border: 1px solid #7567F8;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                }
+            }
+        }
+        .__copyright{
+            text-align: center;
+            padding: 45px 0;
         }
 }
