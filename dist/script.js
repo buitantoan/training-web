@@ -15,4 +15,18 @@
        
     });
 
+    //slider reviews
+    $('.slick-dots').on('init', function(event, slick){
+        var $items = slick.$dots.find('li');
+        $items.addClass('transparent-circle');
+        $items.find('button').remove();
+     });
+    $('.__review-slider').slick({
+        dots: true,
+        dotsClass: 'slick-dots',
+        slidesToShow: 2,
+        slidesToScroll: 1,     
+        arrows: false,
+    });
+
 } )( window )
