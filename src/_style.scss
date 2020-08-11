@@ -1016,42 +1016,30 @@ header{
                                     align-items: flex-end;
                                     
                                 }
-                        }
-                        .__pricing-middle{
+                            &:hover{
                             background-color: #7567F8;
                             color: white;
-
-                                .__pricing-money{
-
-                                    p:nth-child(2){
-                                        color: white;
-                                    }
-                                    p:nth-child(3){
-                                        color: white;
-                                    }
-                                }
-                                .__pricing-service{
+                            
+                                    .__pricing-money{
                                         p{
-                                            font-size: 16px;
-                                            line-height: 216.7%;
-
+                                            color: white;
+                                        }
+                                    }
+                                    .__pricing-service{
+                                        p{
                                             &::before{
-                                                content: '\f152 ';
-                                                position: relative;
-                                                font-family: FontAweSome;
                                                 color: white;
-                                                margin-right: 10px;
-                                                
                                             }
                                         }
-                                }
-                                .__pricing-now{
-
-                                    button{
-                                        border: 3px solid #FFFFFF;
                                     }
-                                }
+                                    .__pricing-now{
+                                        button{
+                                            border: 3px solid #FFFFFF;
+                                        }
+                                    }
+                            }
                         }
+
                 }
         }
 }
