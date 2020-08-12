@@ -29,4 +29,18 @@
         arrows: false,
     });
 
+
+    //open menu right
+    $('#__btn-menu').click(function (e) {
+        e.preventDefault();
+        $('.__modal-menu').addClass('active-modal-menu');
+        $('body').addClass('hidden-body-scroll');
+    });
+    //close modal menu
+    $('#close-modal-menu').click(function(e){
+        e.preventDefault();
+        $('.__modal-menu').removeClass('active-modal-menu');
+        $('body').removeClass('hidden-body-scroll');
+    });
+
 } )( window )

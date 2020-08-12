@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 $wrap: 90%;
+$wrap-content: 65%;
 $XL : 1170px;
 $break-small-phone: 320px;
 $break-media-phone: 375px;
@@ -16,6 +17,9 @@ $break-large-laptop: 1440px;
     padding: 0;
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'DM Sans' ,sans-serif;
     // max-width: 1920px;
@@ -29,7 +33,7 @@ body{
     height: 68px;
     text-align: center;
     // padding: 23px 39px;
-    border: 4px solid #7567F8;
+    border: 5px solid #7567F8;
     outline: none;
     color: white;
     font-weight: bold;
@@ -41,10 +45,21 @@ body{
     transition: 0.3s ease;
         &:hover{
             box-shadow: 0 5px 10px rgba(0,0,0,0.4);
-            border: 4px solid #7567f8;
+            border: 5px solid #7567f8;
             background-color: #FFFFFF;
             color: #7567f8;
         }
+    @media screen and (max-width: $break-large-laptop){
+        width: 168px;
+        height: 55px;
+        font-size: 11px;
+        font-weight: 600;
+        border: 4px solid #7567F8;
+
+            &:hover{
+                border: 4px solid #7567f8;
+            }
+    }
 }
 // enquire now
 .__enquire-now{
@@ -62,6 +77,14 @@ body{
         font-family: FontAweSome;
         margin-left: 4px;
     }
+    &:hover{
+        color: #3425c0;
+    }
+    @media screen and (max-width: $break-large-laptop){
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 36px;
+    }
 }
 //
 header{
@@ -70,8 +93,14 @@ header{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 227px 1fr;
+    grid-template-rows: 98px;
     border: 1px solid #eaeaea;
     background-color: white;
+    
+
+    @media screen and (max-width: $break-large-laptop){
+        grid-template-rows: 88px;
+    }
 
     .__join-us{
         display: flex;
@@ -106,14 +135,25 @@ header{
                             /* identical to box height */
                             color: #222222;
                         }
+                        @media screen and (max-width: $break-large-laptop){
+
+                            p:first-child{
+                                font-size: 11px;
+                            }
+                            p:last-child{
+                                font-size: 18px;
+                            }
+                        }
                     }
-                    span{
+                    span{           
                         width: 1px ;
                         height: 98px;
                         margin-left: 64px ;
                         background-color: #eaeaea;
+
                         @media screen and (max-width: $break-large-laptop){
                             margin-left: 14px ;
+                            height: 88px;
                         }
                     }
             }
@@ -121,9 +161,7 @@ header{
                 flex-basis: 55%;
                 display: flex;
                 align-items: center;
-                @media screen and (max-width: $break-large-laptop){
-                    justify-content: center;
-                }
+                
 
                     a{
                         margin-left: 5px;
@@ -134,9 +172,7 @@ header{
                         line-height: 17px;
                         color: #7567F8;
                         text-decoration: none;
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 12px;
-                        }
+                        
                     }
                     p{
                         letter-spacing: 0.05em;
@@ -145,8 +181,17 @@ header{
                         font-size: 13px;
                         line-height: 17px;
                         color: #555555;
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 12px;
+                        
+                    }
+                    @media screen and (max-width: $break-large-laptop){
+                        justify-content: center;
+
+                        a{
+                            font-size: 11px;
+                            margin-left: 4px;
+                        }
+                        p{
+                            font-size: 11px;
                         }
                     }
             }
@@ -174,7 +219,12 @@ header{
                         right:  -15px;
                     }
                     @media screen and (max-width: $break-large-laptop){
-                        font-size: 32px;
+                        font-size: 28px;
+
+                        &::after{
+                            width: 8px;
+                            height: 8px;
+                        }
                     }
                 }
                 p:last-child{
@@ -188,7 +238,7 @@ header{
                     color: #999999;
 
                     @media screen and (max-width: $break-large-laptop){
-                        font-size: 12px;
+                        font-size: 11px;
                     }
                 }
                
@@ -211,6 +261,11 @@ header{
                         }
                         p{
                             margin: 0 52px 0 48px;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 21px;
+                            text-transform: uppercase;
+                            color: #999999;
                         }
                 }
         }
@@ -224,6 +279,9 @@ header{
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 98px;
+    @media screen and (max-width: $break-large-laptop){
+        padding-top: 88px;
+    }
     .__ss-hero{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -243,9 +301,7 @@ header{
                 position: relative;
                 top: -12%;
                 width: 100%;
-                object-fit: cover;
-                border-bottom-right-radius: 80%;
-              
+                object-fit: cover;              
             }
         }
         .__content-hero{
@@ -276,6 +332,11 @@ header{
                             color: #222222;
                             letter-spacing: 0.435em;
                             text-transform: uppercase;
+
+                            @media screen and (max-width: $break-large-laptop){
+                                font-size: 12px;
+                                font-weight: 600;
+                            }
                         }
                         h2{
                             font-size: 44px;
@@ -285,11 +346,24 @@ header{
                                 span{
                                     color: #7567F8;
                                 }
+                            @media screen and (max-width: $break-large-laptop){
+                                font-size: 36px;
+                            }
                         }
                 }
                 .__content{
                     max-width: 450px;
                     margin: 14px 0 56px;
+
+                        p{
+                            color: #555555;
+                            font-size: 18px;
+                            line-height: 160.2%;
+
+                            @media screen and (max-width: $break-large-laptop){
+                                font-size: 15px;
+                            }
+                        }
                 }
                 .__btn-get-start{
                     font-family: DM Sans;
@@ -305,6 +379,10 @@ header{
                     right: 34px;
                     top: -60px;
 
+                    @media screen and (max-width: $break-large-laptop){
+                        top: -56px;
+                    }
+
                         a{
                             color: white;
                             display: flex;
@@ -315,13 +393,27 @@ header{
                             width: 46.74px;
                             height: 45.47px;
                             border-radius: 50%;
-
+                               
                                 i{
                                     font-size: 17px;
                                 }
+                                &:hover{
+                                    color: yellow;
+                                    transform: translateY(-1px);
+                                }
+                                
+                            @media screen and (max-width: $break-large-laptop){
+                                width: 40px;
+                                height: 40px;
+                                
+                                    i{
+                                        font-size: 13px;
+                                    }
+                            }
+                            
                         }
                         a:nth-child(1){
-                            background: #186CB0;
+                            background: #186CB0;                                                      
                         }
                         a:nth-child(2){
                             background: #E22E04;
@@ -332,14 +424,21 @@ header{
                         a:nth-child(4){
                             background: #00B3D3;
                         }
+                        
                 }
         }
         .__mouse{
             grid-area: __mouse;
             text-align: center;
+            z-index: 9;
+            a{             
 
-            img{
-                cursor: pointer;
+                img{
+                    width: 52px;
+                    height: 52px;
+                    object-fit: cover;
+                    cursor: pointer;            
+                }
             }
         }
     }
@@ -354,6 +453,9 @@ header{
         max-width: $XL;
         margin: 0 auto;
 
+        @media screen and (max-width: $break-large-laptop) {
+            width: $wrap-content;
+        }
             .__s-title{
                 text-align: center;
                 margin: 60px 0;
@@ -365,12 +467,19 @@ header{
                         line-height: 114.5%;
                         letter-spacing: 0.225em;
                         text-transform: uppercase;
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 13px;
+                        }
                     }
                     h2{
                         color: #222222;
                         font-weight: bold;
                         font-size: 44px;
                         line-height: 114.5%;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 36px;
+                        }
                     }
             }
             .__s-contents{
@@ -386,11 +495,22 @@ header{
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
+                        @media screen and (max-width: $break-large-laptop){
+                            width: 48px;
+                            height: 48px; 
+                        }
                         img{
+                            width: 62px;
+                            height: 62px; 
                             position: relative;
                             top: -10px;
                             object-fit: cover;
                             cursor: pointer;
+                            @media screen and (max-width: $break-large-laptop){
+                                width: 42px;
+                                height: 42px;
+                                top: -8px; 
+                            }
                         }
                     }
                     .__s-content{
@@ -398,6 +518,11 @@ header{
                         background: #F4F4F4;
                         padding: 60px 53px 54px 59px;
                         margin: 15px;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            padding: 40px 35px;
+                            margin: 10px;
+                        }
 
                         .__s-meta{
                             margin-top: 18px;
@@ -407,12 +532,18 @@ header{
                                 font-size: 20px;
                                 line-height: 133.2%;
                                 color: #222222;
+                                @media screen and (max-width: $break-large-laptop){
+                                    font-size: 14px;
+                                }
                             }
                             p{
                                 margin-top: 12px;
                                 font-size: 16px;
                                 line-height: 153.7%;
                                 color: #555555;
+                                @media screen and (max-width: $break-large-laptop){
+                                    font-size: 12px;
+                                }
                             }
                         }
                     }
@@ -440,6 +571,11 @@ header{
                     grid-gap: 15px;
                     padding: 125px 15px;
 
+                    @media screen and (max-width: $break-large-laptop){
+                        max-width: $wrap-content;
+                        padding: 100px 15px;
+                    }
+
                         .__digital-main{
                            font-family: 'DM Sans'; 
 
@@ -453,6 +589,10 @@ header{
                                     letter-spacing: 0.435em;
                                     text-transform: uppercase;
                                     color: #7567F8;
+                                    @media screen and (max-width: $break-large-laptop){
+                                        font-size: 13px;
+                                        font-weight: 600;
+                                    }
                                 }
                                 h2{
                                     font-weight: bold;
@@ -461,20 +601,35 @@ header{
                                     /* identical to box height */
                                     color: #222222;
 
+                                    @media screen and (max-width: $break-large-laptop){
+                                        font-size: 32px;
+                                        line-height: 45px;
+                                    }
                                 }
                             }
 
                             .__digital-content{
                                 margin: 18px 0 57px 0;
-
+                                @media screen and (max-width: $break-large-laptop){
+                                    margin: 14px 0 30px 0;
+                                }
                                     p{
                                         font-size: 18px;
                                         line-height: 160.2%;
                                         /* or 29px */
                                         color: #555555;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 13px;
+                                            line-height: 150.2%;
+                                        }
                                     }
                                     p:first-child{
                                         margin-bottom: 20px;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            margin-bottom: 14px;
+                                        }
                                     }
                             }
 
@@ -501,12 +656,26 @@ header{
                                     align-items: flex-start;
                                     flex-direction: column;
                                     padding: 63px 86px;
+
+                                    @media screen and (max-width: $break-large-laptop){
+                                        padding: 40px 60px;
+                                    }
     
                                     button{
+                                        text-align: left;
+                                        margin-bottom: 21px ;
                                         background-color: transparent;
                                         border: none;
                                         outline: none;
                                         cursor: pointer;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            img{
+                                                width: 64%;
+                                                height: 64%;
+                                            }
+                                        }
+
                                     }
                                     p{
                                         font-weight: bold;
@@ -514,6 +683,9 @@ header{
                                         line-height: 128.7%;
                                         /* or 39px */
                                         color: #FFFFFF;
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 18px;
+                                        }
                                     }
                                 }
                             }
@@ -544,6 +716,10 @@ header{
             padding: 93px 0;
             text-align: center;
 
+            @media screen and (max-width: $break-large-laptop){
+                 padding: 73px 0;
+            }
+
             p:nth-child(1){
                 font-weight: bold;
                 font-size: 80px;
@@ -551,6 +727,9 @@ header{
                 /* identical to box height, or 72px */
                 color: #FFFFFF;
                 margin-bottom: 19px;
+                @media screen and (max-width: $break-large-laptop){
+                    font-size: 42px;
+                }
             }
             p:nth-child(2){
                 font-weight: bold;
@@ -559,13 +738,18 @@ header{
                 /* identical to box height, or 31px */
                 color: #FFFFFF;
                 margin-bottom: 3px;
+                @media screen and (max-width: $break-large-laptop){
+                    font-size: 16px;
+                }
             }
             p:nth-child(3){
                 font-size: 16px;
                 line-height: 129%;
                 /* identical to box height, or 21px */
                 color: #FFFFFF;
-
+                @media screen and (max-width: $break-large-laptop){
+                    font-size: 13px;
+                }
             }
         }
 
@@ -585,6 +769,11 @@ header{
             flex-direction: column;
             align-items: center;
 
+            @media screen and (max-width: $break-large-laptop){
+                max-width: $wrap-content;
+                padding: 100px 0 ;
+            }
+
                 .__our-work-title{
                     margin-bottom: 48px;
                     text-align: center;
@@ -597,6 +786,10 @@ header{
                         letter-spacing: 0.435em;
                         text-transform: uppercase;
                         color: #7567F8;
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
                     }
                     h2{
                         font-weight: bold;
@@ -604,6 +797,9 @@ header{
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 36px;
+                        }
 
                     }
                 }
@@ -616,6 +812,10 @@ header{
                         .__our-work-content{
                             flex: 1 calc(33% - 30px);
                             margin: 15px;
+
+                            @media screen and (max-width: $break-large-laptop){
+                                margin: 10px;
+                            }
 
                                 .__our-work-img{
                                     width: 100%;
@@ -658,6 +858,9 @@ header{
                                 }
                                 .__our-work-meta{
                                     padding: 29px;
+                                    @media screen and (max-width: $break-large-laptop){
+                                        padding: 16px;
+                                    }
 
                                         a{
                                             margin-bottom: 3px;
@@ -668,6 +871,10 @@ header{
                                             /* or 29px */
                                             color: #222222;
 
+                                            @media screen and (max-width: $break-large-laptop){
+                                                font-size: 18px;
+                                            }
+
                                         }
                                         p{
                                             font-weight: 500;
@@ -675,6 +882,10 @@ header{
                                             line-height: 153.7%;
                                             /* identical to box height, or 25px */
                                             color: #555555;
+
+                                            @media screen and (max-width: $break-large-laptop){
+                                                font-size: 13px;
+                                            }
                                         }
                                 }
                         }
@@ -695,9 +906,17 @@ header{
             align-items: center;
             padding: 117px 0;
 
+            @media screen and (max-width: $break-large-laptop){
+                max-width: $wrap-content;
+                padding: 107px 0;
+            }
+
                 .__review-title{
                     margin-bottom: 49px;
                     text-align: center;
+                    @media screen and (max-width: $break-large-laptop){
+                        margin-bottom: 39px;
+                    }
 
                     p{
                         font-weight: 500;
@@ -707,6 +926,11 @@ header{
                         letter-spacing: 0.435em;
                         text-transform: uppercase;
                         color: #7567F8;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
                     }
                     h2{
                         font-weight: bold;
@@ -714,7 +938,10 @@ header{
                         line-height: 47px;
                         /* identical to box height */
                         color: #222222;
-
+                        
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 36px;
+                        }
                     }
                 }
 
@@ -726,6 +953,9 @@ header{
                     grid-template-columns: 1fr;
                     grid-gap: 30px;
 
+                    @media screen and (max-width: $break-large-laptop){
+                        grid-gap: 20px;
+                    }
                         
                         .slick-dots{
                             display: flex;
@@ -741,6 +971,7 @@ header{
                                         position: relative;
                                         outline: none;
                                         border: none;
+                                       
                                         
                                         &::before{
                                             position: absolute;
@@ -753,24 +984,24 @@ header{
                                             background: #C4C4C4;
                                             border-radius: 100%;
                                             border: 1px solid #C4C4C4;
+                                            
                                         }
+                                        // @media screen and (max-width: $break-large-laptop){
+                                        //     width: 9px;
+                                        //     height: 9px;
+                                          
+                                        // }
                                     }
                                 }
                                 li.slick-active{
-                                    button{                                  
+                                    button{
+                                                                          
                                         &::before{
                                             background: #7567F8;
                                         }
                                     }
                                 } 
-                            // li>.transparent-circle{
-                            //     margin: 5px;
-                            //     position: relative;
-                            //     width: 11px;
-                            //     height: 11px;
-                            //     background: #7567F8;
-                            //     border-radius: 50%;
-                            // }
+
                             
                         }
                         .__review-slide-item{
@@ -778,33 +1009,101 @@ header{
                             margin: 15px;
                             background-color: white;
 
-                            .__review-item{   
-                                padding: 50px 60px 44px;                             
-                                display: flex;
-                                flex-direction: row;                             
-                            
+                            @media screen and (max-width: $break-large-laptop){
+                                margin: 10px; 
+                            }
 
-                                .__review-img{
-                                  
+                            .__review-item{   
+                                padding: 44px 60px 44px 67px;                             
+                                display: flex;
+                                flex-direction: row; 
+
+                                @media screen and (max-width: $break-large-laptop){
+                                    padding: 26px 36px 26px 40px;   
+                                }
+                                 
+                                .__review-img{                                 
                                    margin-right: 30px;
+                                   position: relative;
+
+                                    @media screen and (max-width: $break-large-laptop){
+                                        margin-right: 20px; 
+                                    }
 
                                     img{
+                                        position: relative;
+                                        width: 100px;
+                                        height: 100px;
                                         cursor: pointer;
                                         border-radius: 50%;
                                         object-fit: cover;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            width: 62px;
+                                            height: 62px;
+                                        }
                                     }
+                                    .__review-qoute{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 32%;
+                                        right: 18px;
+                                        width: 36px;
+                                        height: 36px;
+                                        background: #FFFFFF;
+                                        transform: matrix(-1, 0, 0, -1, 0, 0);
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            width: 24px;
+                                            height: 24px;
+                                            top: 26%;
+                                            right: 8px;
+                                        }
+                                            .fa-quote-right{
+                                                font-size: 16px;
+                                                line-height: 160.2%;
+                                                /* or 26px */
+                                                color: #7567F8;
+
+                                                @media screen and (max-width: $break-large-laptop){
+                                                    font-size: 13px;
+                                                }
+                                            }
+
+                                       
+                                    }
+
                                 }
 
                                 .__review-meta{
                                    display: flex;
                                    flex-direction: column;
-                                        
+                                    
+                                    p{
+                                        font-style: italic;
+                                        font-size: 16px;
+                                        line-height: 160.2%;
+                                        /* or 26px */
+                                        color: #555555;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 12px;
+                                        }
+                                    }
                                     .__review-meta-info{
                                         display: flex;
                                         flex-direction: row;
                                         justify-content: space-between;
                                         align-items: center;
                                         margin-top: 24px;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            margin-top: 16px;
+                                        }
+
                                             .__review-meta-info-name{
 
                                                 a{
@@ -813,6 +1112,10 @@ header{
                                                     font-weight: bold;
                                                     font-size: 20px;
                                                     line-height: 133.2%;
+                                                    
+                                                    @media screen and (max-width: $break-large-laptop){
+                                                        font-size: 14px;
+                                                    }
 
                                                     span{
                                                         font-weight: 500;
@@ -821,6 +1124,11 @@ header{
                                                         /* identical to box height, or 20px */
                                                         text-transform: uppercase;
                                                         color: #7567F8;
+
+                                                        @media screen and (max-width: $break-large-laptop){
+                                                            font-size: 10px;
+                                                            font-weight: 400;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -833,7 +1141,11 @@ header{
                                                     line-height: 133.2%;
                                                     /* or 17px */
                                                     color: #D7DB17;
-                                             
+
+                                                    @media screen and (max-width: $break-large-laptop){
+                                                        font-size: 10px;
+                                                      
+                                                    }
                                                 }
                                             }
                                     }
@@ -857,6 +1169,10 @@ header{
             margin: 0 auto;
             text-align: center;
 
+            @media screen and (max-width: $break-large-laptop){
+                max-width: $wrap-content;
+                padding: 96px 0;
+            }
                 .__team-title{
                     margin-bottom: 60px;
 
@@ -868,6 +1184,11 @@ header{
                         letter-spacing: 0.435em;
                         text-transform: uppercase;
                         color: #7567F8;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
                     }
                     h2{
                         font-weight: bold;
@@ -876,30 +1197,78 @@ header{
                         /* identical to box height */
                         color: #222222;
 
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 36px;
+                        }
                     }
                 }
 
                 .__team-work{
                     display: flex;
-                    flex-direction: row wrap;
+                    flex-direction: row ;
+                    flex-wrap: wrap;
 
                         .__team-info{
                             flex: 1 calc(25% - 30px);
                             margin: 15px;
 
+                            @media screen and (max-width: $break-large-laptop){
+                                margin: 10px;
+                            }
+
                                 .__team-img{
                                     width: 100%;
+                                    height: 285px;
+                                    overflow: hidden;
+                                    position: relative;
 
+                                    @media screen and (max-width: $break-large-laptop){
+                                        height: 70%;
+                                    }
+                                
                                     img{
                                         width: 100%;
                                         object-fit: cover;
                                         cursor: pointer;
+                                        height: 100%;
                                     }
+                                    span{
+                                        display: none;
+                                        color: #FFFFFF;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        line-height: 142.2%;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        background-color: rgba(0,0,0,0.3);
+                                        border-radius: 5px;
+                                        padding: 5px;
+                                        transition: 0.5s ease; 
+                                    }
+                                    
+                                    &:hover{                                     
+                                        img{
+                                            transition: 0.5s ease; 
+                                            transform: scale(1.1);
+                                        }
+                                        span{
+                                            display: block;
+                                        }
+                                    }
+                                    
                                 }
 
                                 .__team-meta{
                                     margin-top: 28px;
                                     text-align: left;
+
+                                    @media screen and (max-width: $break-large-laptop){
+                                        text-align: center;
+                                        margin-top: 20px;
+                                    }
+
                                     a{
                                         margin-bottom: 4px;
                                         text-decoration: none;
@@ -909,6 +1278,9 @@ header{
                                         /* or 29px */
                                         color: #222222;
 
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 18px;
+                                        }
                                     }
                                     p{
                                         font-weight: 500;
@@ -917,6 +1289,10 @@ header{
                                         /* identical to box height, or 25px */
                                         text-transform: uppercase;
                                         color: #7567F8;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 13px;
+                                        }
                                     }
                                 }
                         }
@@ -936,6 +1312,10 @@ header{
         max-width: $XL;
         margin: 0 auto;
 
+        @media screen and (max-width: $break-large-laptop){
+           max-width: $wrap-content;
+        }
+
         .__ready-main{         
             display: flex;
             flex-direction: row;          
@@ -943,12 +1323,15 @@ header{
             justify-content: space-between;
             align-items: center;
 
+            @media screen and (max-width: $break-large-laptop){
+                padding: 53px 0 42px;
+            }
+
                 .__ready-team{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     
-
                     .__ready-img{
                         width: 112px;
                         height: 112px;
@@ -958,6 +1341,13 @@ header{
                         background-color: white;
                         border-radius: 50%;
                         margin-right: 35px;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            width: 92px;
+                            height: 92px;
+                            margin-right: 25px;
+                        }
+
                         img{                     
                             object-fit: cover;
                         }
@@ -971,22 +1361,32 @@ header{
                             line-height: 128.7%;
                             /* or 51px */
                             color: #222222;
+
+                            @media screen and (max-width: $break-large-laptop){
+                                font-size: 28px;
+                            }
                         }
                         p{
                             font-size: 18px;
                             line-height: 160.2%;
                             /* identical to box height, or 29px */
                             color: #555555;
-    
+
+                            @media screen and (max-width: $break-large-laptop){
+                                font-size: 13px;
+                            }
                         }
                     }
                 }
-                
-                
+                              
                 .__ready-now{
+                    display: flex;
+                    align-items: center;
 
                     a{
-                        padding: 23px 48px;
+                        padding: 20px 39px;
+                        text-align: center;
+                        text-decoration: none;
                         font-weight: bold;
                         font-size: 14px;
                         line-height: 160.2%;
@@ -995,6 +1395,12 @@ header{
                         color: #7567F8;
                         border: 5px solid #7567F8;
                         margin-right: 17px;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 13px;
+                            margin-right: 12px;
+                            padding: 12px 32px;
+                        }
                     }
                 }
         }
@@ -1013,8 +1419,17 @@ header{
             text-align: center;
             padding: 116px 0 121px;
 
+            @media screen and (max-width: $break-large-laptop){
+                max-width: $wrap-content;
+                padding: 96px 0 101px;
+            }
+
                 .__pricing-titile{
                     margin-bottom: 59px;
+
+                    @media screen and (max-width: $break-large-laptop){
+                        margin-bottom: 49px;
+                    }
 
                     p{
                         font-weight: bold;
@@ -1024,6 +1439,10 @@ header{
                         letter-spacing: 0.225em;
                         text-transform: uppercase;
                         color: #7567F8;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 13px;
+                        }
                     }
                     h2{
                         font-weight: bold;
@@ -1032,6 +1451,9 @@ header{
                         /* identical to box height */
                         color: #222222;
 
+                        @media screen and (max-width: $break-large-laptop){
+                            font-size: 36px;
+                        }
                     }
                 }
 
@@ -1050,7 +1472,9 @@ header{
                             border: 5px solid #7567F8;
 
                             @media screen and (max-width: $break-large-laptop){
-                                padding: 40px 50px;
+                                padding: 30px 36px;
+                                margin: 8px;
+                                border: 4px solid #7567F8;
                             }
                            
                                 .__pricing-money{
@@ -1065,8 +1489,13 @@ header{
                                             line-height: 133.2%;   
                                                                            
                                         }
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 16px;
+                                            
+                                        }
                                     }
                                     p:nth-child(2){
+                                        margin: 17px 0 13px;
                                         font-weight: bold;
                                         font-size: 14px;
                                         line-height: 160.2%;
@@ -1074,17 +1503,29 @@ header{
                                         letter-spacing: 0.585em;
                                         text-transform: uppercase;
                                         color: #7567F8;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 11px;
+                                            margin: 12px 0 8px;
+                                        }
                                     }
                                     p:nth-child(3){
                                         font-size: 24px;                                     
                                         font-weight: bold;
                                         line-height: 133.2%;   
                                         color: #222222;
+
+                                        @media screen and (max-width: $break-large-laptop){
+                                            font-size: 18px;
+                                        }
                                     }
                                 }
                                 .__pricing-service{
                                     margin: 35px 0 80px;
 
+                                    @media screen and (max-width: $break-large-laptop){
+                                        margin: 20px 0 40px;
+                                    }
                                         p{
                                             font-size: 16px;
                                             line-height: 216.7%;
@@ -1095,7 +1536,11 @@ header{
                                                 font-family: FontAweSome;
                                                 color: #7567F8;
                                                 margin-right: 10px;
-                                                font-size: 18px;
+                                                
+                                            }
+
+                                            @media screen and (max-width: $break-large-laptop){
+                                                font-size: 13px;                                             
                                             }
                                         }
                                 }
@@ -1142,8 +1587,17 @@ header{
         text-align: center;
         padding: 120px 0;
 
+        @media screen and (max-width: $break-large-laptop){
+            max-width: $wrap-content;
+            padding: 90px 0 ;
+        }
+
             .__recent-title{
                 margin-bottom: 51px;
+
+                @media screen and (max-width: $break-large-laptop){
+                    margin-bottom: 40px;
+                }
 
                 p{
                     font-weight: bold;
@@ -1153,6 +1607,10 @@ header{
                     letter-spacing: 0.225em;
                     text-transform: uppercase;
                     color: #7567F8;
+
+                    @media screen and (max-width: $break-large-laptop){
+                        font-size: 13px;
+                    }
                 }
                 h2{
                     font-weight: bold;
@@ -1160,6 +1618,10 @@ header{
                     line-height: 47px;
                     /* identical to box height */
                     color: #222222;
+
+                    @media screen and (max-width: $break-large-laptop){
+                        font-size: 36px;
+                    }
 
                 }
             }
@@ -1176,6 +1638,10 @@ header{
                         justify-content: center;
                         align-items: center;
                         position: relative;
+
+                        @media screen and (max-width: $break-large-laptop){
+                            margin: 10px;
+                        }
 
                             .__recent-img{
                                 width: 100%;
@@ -1201,6 +1667,9 @@ header{
                                 transform: translate(-50%, -50%);
                                 padding: 46px 48px 66px 75px;
 
+                                @media screen and (max-width: $break-large-laptop){
+                                    padding: 30px 32px 40px 56px;
+                                }
                                     .__recent-marketing{                                      
                                         align-self: flex-end;
 
@@ -1217,6 +1686,17 @@ header{
                                             outline: none;
                                             border: 1px solid #7567F8;
                                             cursor: pointer;
+                                            transition: 0.5s ease;
+
+                                            &:hover{
+                                                background-color: green;
+                                            }
+                                            @media screen and (max-width: $break-large-laptop){
+                                                font-size: 11px;
+                                                width: 110px;
+                                                height: 30px;
+                                                letter-spacing: 1px;
+                                            }
                                         }
                                     }
                                     .__recent-meta{
@@ -1234,19 +1714,29 @@ header{
                                                         content: '\f073';
                                                         font-family: FontAweSome;
                                                         color: #7567F8;
-                                                        font-size: 16;
                                                         margin-right: 5px;
+                                                    }
+
+                                                    @media screen and (max-width: $break-large-laptop){
+                                                        font-size: 13px;
                                                     }
                                                 }
                                         }
 
                                         h2{
-                                            font-weight: bold;
+                                            font-weight: 600;
                                             font-size: 30px;
                                             line-height: 132.7%;
                                             /* or 40px */
                                             color: #FFFFFF; 
-                                            margin-bottom: 17px;                                         
+                                            margin: 7px 0 17px; 
+                                            letter-spacing: 1px;
+                                            
+                                            @media screen and (max-width: $break-large-laptop){
+                                                font-size: 18px;
+                                                font-weight: 500;
+                                                
+                                            }                                        
                                         }
                                         .__recent-author{
                                             display: flex;
@@ -1254,15 +1744,26 @@ header{
                                             align-items: center;
 
                                                 img{
+                                                    width: 40px;
+                                                    height: 40px;
                                                     border-radius: 50%;
                                                     object-fit: cover;
                                                     margin-right: 11px;
+
+                                                    @media screen and (max-width: $break-large-laptop){
+                                                        width: 30px;
+                                                        height: 30px;
+                                                    }
                                                 }
                                                 p{
                                                     font-weight: bold;
                                                     font-size: 16px;
                                                     line-height: 132.7%;
                                                     color: #FFFFFF; 
+
+                                                    @media screen and (max-width: $break-large-laptop){
+                                                        font-size: 12px;
+                                                    }
                                                 }
                                         }
                                     }
@@ -1272,6 +1773,10 @@ header{
 
             .__recent-now{
                 margin-top: 70px;
+
+                @media screen and (max-width: $break-large-laptop){
+                    margin-top: 50px;
+                }
             }
     }
 }
@@ -1288,14 +1793,23 @@ header{
             margin: 0 auto;
             padding: 120px 0;
 
+            @media screen and (max-width: $break-large-laptop){
+                max-width: $wrap-content;
+                padding: 90px 0 ;
+            }
+
                 .__digital-marketing-advanted{
                     flex: 1 calc(50% - 30px);
                     display: flex;
                     flex-direction: column;
+                    margin: 10px;
 
                         .__digital-marketing-title{
                             margin: 20px 0;
 
+                            @media screen and (max-width: $break-large-laptop){
+                                margin: 15px 0;
+                            }
                                 p{
                                     font-weight: 500;
                                     font-size: 15px;
@@ -1305,6 +1819,12 @@ header{
                                     text-transform: uppercase;
                                     color: #FFFFFF;
                                     margin-bottom: 8px;
+                                    
+                                    @media screen and (max-width: $break-large-laptop){
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        margin-bottom: 4px;
+                                    }
                                 }
                                 h2{
                                     font-weight: bold;
@@ -1312,6 +1832,11 @@ header{
                                     line-height: 50px;
                                     /* identical to box height */
                                     color: #FFFFFF;
+
+                                    @media screen and (max-width: $break-large-laptop){
+                                        font-size: 30px;
+                                        line-height: 45px;
+                                    }
                                 }
                         }
 
@@ -1323,21 +1848,37 @@ header{
                                     /* or 29px */
                                     color: #FFFFFF;
                                 }
+                                @media screen and (max-width: $break-large-laptop){
+                                    margin-bottom: 20px;
+                                    p{
+                                        font-size: 12px;
+                                    }
+                                }
                         }
 
                         .__digital-marketing-agv{
                             margin-bottom: 60px;
 
                             p{
+                              
                                 font-size: 18px;
                                 line-height: 160.2%;
                                 /* or 29px */
                                 color: #FFFFFF;
+                                margin-bottom: 8px;
 
                                 &::before{
                                     content: '\f00c ';
                                     font-family: FontAweSome;
                                     margin-right: 10px;
+                                }
+                            }
+
+                            @media screen and (max-width: $break-large-laptop){
+                                margin-bottom: 40px;
+                                p{
+                                    font-size: 12px;
+                                    
                                 }
                             }
                         }
@@ -1358,9 +1899,14 @@ header{
                         form{
                             background-color: white;
                             max-width:  470px;
-                            margin: 0 auto;
+                            margin: 0 32px;
                             padding: 43px 45px 46px;
                             border-radius: 5px;
+
+                            @media screen and (max-width: $break-large-laptop){
+                                max-width:  400px;
+                                padding: 25px 30px 30px;
+                            }
 
                                 .__form-marketing-title{
                                     text-align: center;
@@ -1382,6 +1928,16 @@ header{
                                             letter-spacing: 0.175em;
                                             text-transform: uppercase;
                                             color: #7567F8;
+
+                                        }
+                                        @media screen and (max-width: $break-large-laptop){
+                                            margin-bottom: 16px;
+                                            h2{
+                                                font-size: 24px;
+                                            }
+                                            p{
+                                                font-size: 12px;
+                                            }
 
                                         }
                                 }
@@ -1411,6 +1967,23 @@ header{
                                             background: #7567F8;
                                             border: 1px solid #7567F8 ;
                                             cursor: pointer;
+                                            transition: 0.5s ease;
+
+                                                &:hover{
+                                                    background-color: rgb(14, 165, 14);
+                                                    border: 1px solid green ;
+                                                }
+                                        }
+                                        @media screen and (max-width: $break-large-laptop){
+                                            margin: 8px 0;
+                                            .__input-control{
+                                                padding: 14px 20px;
+                                                font-size: 12px;
+                                            }
+                                            .submit{
+                                                font-size: 12px;
+                                                letter-spacing: 1px;
+                                            }
                                         }
                                 }
                                 .__form-marketing-name{
@@ -1429,6 +2002,14 @@ header{
                                             background: #F7F5F5;
                                             outline: none;
                                             border: 1px solid #F7F5F5 ;
+                                        }
+                                    
+                                        @media screen and (max-width: $break-large-laptop){
+                                            grid-gap: 8px;
+                                            input{
+                                                padding: 14px 20px;
+                                                font-size: 12px;
+                                            }
                                         }
                                 }
                         }
@@ -1450,7 +2031,10 @@ footer{
             background-size: cover;
             background-blend-mode: hard-light;
             padding: 82px 0 90px;
-            
+
+            @media screen and (max-width: $break-large-laptop){
+                padding: 62px 0 70px;          
+            }
             
             .__infomation-us{
                 max-width: $XL;
@@ -1458,11 +2042,16 @@ footer{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                @media screen and (max-width: $break-large-laptop){
+                    max-width: $wrap-content;
+                }
             
                 .__logo{
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     p{
                         margin: 0;
                     }
@@ -1471,6 +2060,7 @@ footer{
                         font-size: 36px;
                         line-height: 47px;
                         position: relative;
+                        color: #222222;
 
                         &::after{
                             position: absolute;
@@ -1483,7 +2073,12 @@ footer{
                             right:  -15px;
                         }
                         @media screen and (max-width: $break-large-laptop){
-                            font-size: 32px;
+                            font-size: 28px;
+
+                            &::after{
+                                width: 8px;
+                                height: 8px;
+                            }
                         }
                     }
                     p:last-child{
@@ -1495,8 +2090,10 @@ footer{
                         letter-spacing: 0.315em;
                         text-transform: uppercase;
                         color: #999999;
+                        text-align: left;
+
                         @media screen and (max-width: $break-large-laptop){
-                            font-size: 12px;
+                            font-size: 11px;
                         }
                     }
                 }
@@ -1509,11 +2106,21 @@ footer{
                     /* or 29px */
                     text-align: center;
                     color: #555555;
+
+                    @media screen and (max-width: $break-large-laptop){
+                        max-width: 480px;
+                        margin: 15px 0 25px;
+                        font-size: 14px;
+                    }
                 }
                 .__links{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr 1.5fr;
                     grid-gap: 30px;
+
+                    @media screen and (max-width: $break-large-laptop){
+                        grid-gap: 15px;
+                    }
                         .__link{
                             display: flex;
                             flex-direction: column;
@@ -1537,6 +2144,10 @@ footer{
                                             color: #7567F8;
                                         }
                                     }
+                                    
+                                    @media screen and (max-width: $break-large-laptop){
+                                        font-size: 12px;
+                                    }
                                 }
                         }
                         .__newsletter{
@@ -1548,9 +2159,15 @@ footer{
                                 line-height: 31px;
                                 color: #7567F8;
                                 margin-bottom: 17px;
+
+                                @media screen and (max-width: $break-large-laptop){
+                                    font-size: 16px;
+                                    margin-bottom: 6px;
+                                }
                             }
                             div{
                                 position: relative;
+
                                 input{
                                     width: 100%;
                                     padding: 19px 30px;
@@ -1560,7 +2177,7 @@ footer{
                                     line-height: 128.7%;
                                     color: #999999;
                                     outline: none;
-                                    border: 1px solid #999999;
+                                    border: 1px solid #eaeaea;
                                     position: relative;
                                 }
                                 span{
@@ -1569,6 +2186,7 @@ footer{
                                     top: 80%;
                                     right: 10%;
                                     transform: translate(0,-46%);
+                                    color: #6253EE;
                                 }
                                 
                                 .btn-newsletter{
@@ -1582,6 +2200,24 @@ footer{
                                     color: #FFFFFF;
                                     border: 1px solid #7567F8;
                                     cursor: pointer;
+                                    transition: 0.5s ease;
+                                            
+                                        &:hover{
+                                            background-color: rgb(14, 165, 14);
+                                            border: 1px solid green ;
+                                        }
+                                }
+
+                                @media screen and (max-width: $break-large-laptop){
+                                    input{
+                                        font-size: 11px;
+                                        padding: 14px 20px;
+                                    }
+                                    .btn-newsletter{
+                                        margin-top: 10px;
+                                        font-size: 13px;
+                                        letter-spacing: 1px;
+                                    }
                                 }
                             }
                         }
@@ -1592,8 +2228,102 @@ footer{
             text-align: center;
             padding: 45px 0;
 
+            @media screen and (max-width: $break-large-laptop){
+                padding: 30px 0;
+            }
                 span{
                      color:  #7567F8;
+                }
+        }
+}
+//Modal Menu
+.hidden-body-scroll{
+    overflow: hidden;
+}
+.active-modal-menu{
+    display: block !important;
+}
+.__modal-menu{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0,0,0,0.5);
+    overflow: auto;
+
+        .__modal-menu-right{
+            height: 100vh;
+            overflow-y: scroll;
+            top: 0;
+            left: calc(100% - 340px);
+            width: 340px;
+            position: relative; 
+
+                .__modal-menu-main{ 
+                    width: 100%;                         
+                    display: flex;
+                    flex-direction: column;                
+                    background-color: #7567F8; 
+                    padding-bottom: 60px;                
+
+                        .__modal-menu-title{
+                            padding: 10px 16px ;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 1px solid #555555;
+                                h2{
+                                    color: #D7DB17;
+                                    text-transform: uppercase;
+                                }
+                                p{
+                                    color: #D7DB17;
+                                    font-size: 18px;
+                                    cursor: pointer;
+                                }
+                        }
+                        .__modal-menu-content{
+                            padding: 0 16px ;
+                            border-bottom: 1px solid #555555;
+
+                            h2{
+                                color: #D7DB17;
+                            }
+                            p{
+                                margin: 12px auto;
+                                color: #D7DB17;
+                            }
+                        }
+                        .__modal-menu-link{
+                            padding: 0 16px ;
+                            text-align: right;
+
+                                ul{
+                                    list-style-type: none;
+
+                                    li{
+                                        padding: 9px 0;
+                                        a{
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                        }
+                        .__modal-menu-social{
+                            padding: 0 16px ;
+                            // text-align: right;
+
+                            a{
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                margin: 5px;
+                                background-color: #D7DB17;
+                            }
+                        }
                 }
         }
 }
