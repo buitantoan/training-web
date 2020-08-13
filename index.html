@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./src/main.scss">
     <link rel="stylesheet" href="./dist/icon/css/font-awesome.min.css">
     <link rel="stylesheet" href="./dist/css/slick.css">
+    <link rel="stylesheet" href="./dist/css/magnific-popup.css">
+
 
 </head>
 
@@ -85,7 +87,7 @@
                 </div>
             </div>
             <div class="__mouse">
-                <a href="#services">
+                <a href="#" id="mouse">
                     <img src="./images/mouse.png" alt="mouse">
                 </a>
             </div>
@@ -189,8 +191,8 @@
                 <div class="__digital-mask">
                     <div class="__digital-video">
                         <div class="__digital-start">
-                            <button>
-                                <img src="./images/img_digital/play-button(6)-1.svg" alt="play">
+                            <button id="btn-play-video">
+                                <img id="show_popup-video" src="./images/img_digital/play-button(6)-1.svg" alt="play">
                             </button>
                             <p>Start Here: How Spire Creates Business Growth</p>
                         </div>
@@ -680,7 +682,7 @@
                         <a href="#">SEO Services</a>
                         <a href="#">PPC Services</a>
                         <a href="#">Web Design Services</a>
-                        <a href="#">Web Design Services</a>
+                        <a href="#">Social Media Services</a>
                     </div>
                     <div class="__link item">
                         <a href="#"> About Us</a>
@@ -713,7 +715,15 @@
             <p>©2020 <span>Spire</span>. All Rights Reserved.</p>
         </div>
     </footer>
-
+    <div id="mySearch" class="search-box">
+        <div class="search-main">
+            <span class="closebtn" title="Close search box">x</span>
+            <div class="search-box-content">
+                <input class="search-text" type="text" placeholder="Search.." name="search">
+                <button class="btn-searching" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
     <div class="__modal-menu">
         <div class="__modal-menu-right">
             <div class="__modal-menu-main">
@@ -743,7 +753,7 @@
                             <a href="#">Web Design Services</a>
                         </li>
                         <li>
-                            <a href="#">Web Design Services</a>
+                            <a href="#">Social Media Services</a>
                         </li>
                         <li>
                             <a href="#"> About Us</a>
@@ -808,7 +818,9 @@
 
     <script src="./dist/js/jquery.min.js"></script>
     <script src="./dist/js/slick.min.js"></script>
+    <script src="./dist/js/magnific-popup.js"></script>
     <script src="./dist/script.js"></script>
+
 </body>
 
 </html>
