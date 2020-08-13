@@ -2294,7 +2294,7 @@ footer{
             width: 340px ;
             position: relative;
             left: calc(100% - 340px);
-            animation: toright 1s ease-in-outg;
+            animation: toright 1s ease-in-out;
             @keyframes toright {
                 from{
                     transform: translateX(100%);
