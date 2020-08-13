@@ -2277,6 +2277,7 @@ footer{
 }
 .active-modal-menu{
     display: block !important;
+
 }
 .__modal-menu{
     width: 100%;
@@ -2290,10 +2291,19 @@ footer{
             height: 100vh;
             overflow-y: scroll;
             top: 0;
-            left: calc(100% - 340px);
-            width: 340px;
+            width: 340px ;
             position: relative;
-            
+            left: calc(100% - 340px);
+            animation: toright 1s ease-in-outg;
+            @keyframes toright {
+                from{
+                    transform: translateX(100%);
+                }
+                to{
+                    transform: translateX(calc(100% - 340px));
+                }
+            }
+                    
                 .__modal-menu-main{ 
                     width: 100%;                         
                     display: flex;
