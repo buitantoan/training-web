@@ -38,11 +38,10 @@ body{
     // padding: 23px 39px;
     border: 5px solid #7567F8;
     outline: none;
-    color: white;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 14px;
     line-height: 160.2%;
-    letter-spacing: 0.19em;
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s ease;
@@ -73,7 +72,7 @@ body{
     letter-spacing: 0.19em;
     text-transform: uppercase;
     color: #7567F8;
-    margin-left: 72px;
+    margin-left: 32px;
 
     &::after{
         content: "\f0da";
@@ -97,9 +96,9 @@ header{
     display: grid;
     grid-template-columns: 1fr 227px 1fr;
     grid-template-rows: 98px;
-    border: 1px solid #eaeaea;
-    background-color: white;
-    
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
 
     @media screen and (max-width: $break-large-laptop){
         grid-template-rows: 80px;
@@ -212,6 +211,7 @@ header{
                 p:first-child{
                     font-weight: bold;
                     font-size: 36px;
+                    color: #222222;
                     line-height: 47px;
                     position: relative;                 
                     
@@ -260,7 +260,7 @@ header{
                     align-items: center;
 
                         button{
-                            width: 98px;
+                            width: 106px;
                             height: 100%;
                             background: #7567F8;
                             border: 1px solid #7567f8;
@@ -292,7 +292,7 @@ header{
 .__section-heros{
     background-image: url("../images/section-bg.png");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 98px;
@@ -301,7 +301,7 @@ header{
     }
     .__ss-hero{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.03fr;
         grid-template-rows: auto;
         grid-template-areas:  
             "__thumbnail   __content-hero"
@@ -323,13 +323,13 @@ header{
         }
         .__content-hero{
             grid-area: __content-hero;
-                position: relative;
-                top: 20%;
+            position: relative;
+            top: 23%;
 
                 .__img{
                     position: absolute;
                     top: -30%;
-                    left: 42%;
+                    left: 40%;
                     transform: translate(-40%);
                     z-index: -1;
                     
@@ -349,7 +349,7 @@ header{
                             color: #222222;
                             letter-spacing: 0.435em;
                             text-transform: uppercase;
-                            margin-bottom: 8px;
+                            margin-bottom: 10px;
 
                             @media screen and (max-width: $break-large-laptop){
                                 font-size: 12px;
@@ -357,7 +357,7 @@ header{
                             }
                         }
                         h2{
-                            font-size: 44px;
+                            font-size: 41px;
                             color: #222222;
                             line-height: 142.2%;
                          
@@ -366,13 +366,13 @@ header{
                                     color: #7567F8;
                                 }
                             @media screen and (max-width: $break-large-laptop){
-                                font-size: 32px;
+                                font-size: 30px;
                             }
                         }
                 }
                 .__content{
                     max-width: 450px;
-                    margin: 14px 0 56px;
+                    margin: 14px 0 36px;
 
                         p{
                             color: #555555;
@@ -400,7 +400,7 @@ header{
 
                     @media screen and (max-width: $break-large-laptop){
                         top: -46px;
-                        right: 24px;
+                        right: 27px;
                     }
 
                         a{
@@ -408,7 +408,7 @@ header{
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            margin-bottom: 15px;
+                            margin-bottom: 12px;
                             text-decoration: none;
                             width: 46.74px;
                             height: 45.47px;
@@ -452,6 +452,8 @@ header{
             grid-area: __mouse;
             text-align: center;
             z-index: 9;
+            position: relative;
+            top: -160px;
             a{             
 
                 img{
@@ -465,10 +467,8 @@ header{
     }
 }
 .__services{
-    padding-top: 70px;
     width: 100%;
-
-
+    margin-top: -90px;
     .__service{
         width: $wrap;
         max-width: $XL;
@@ -479,7 +479,7 @@ header{
         }
             .__s-title{
                 text-align: center;
-                margin: 60px 0;
+                margin: 59px 0;
 
                     p{
                         color: #7567F8;
@@ -508,46 +508,43 @@ header{
             }
             .__s-contents{
                 margin: 0 auto;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 30px;
 
-                    .__s-img{
-                        width: 72px;
-                        height: 72px;          
-                        background-image: url("../images/img_service/Ellipse.png");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        @media screen and (max-width: $break-large-laptop){
-                            width: 48px;
-                            height: 48px; 
-                        }
-                        img{
-                            width: 62px;
-                            height: 62px; 
-                            position: relative;
-                            top: -10px;
-                            object-fit: cover;
-                            cursor: pointer;
-                            @media screen and (max-width: $break-large-laptop){
-                                width: 42px;
-                                height: 42px;
-                                top: -8px; 
-                            }
-                        }
-                    }
+                   
                     .__s-content{
-                        flex: 1 1 calc(33% - 30px);
                         background: #F4F4F4;
-                        padding: 60px 53px 54px 59px;
-                        margin: 15px;
+                        padding: 70px 46px 54px 59px;
 
                         @media screen and (max-width: $break-large-laptop){
                             padding: 40px 35px;
-                            margin: 10px;
                         }
-
+                        .__s-img{
+                            width: 72px;
+                            height: 72px;          
+                            background-image: url("../images/img_service/Ellipse.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            @media screen and (max-width: $break-large-laptop){
+                                width: 48px;
+                                height: 48px; 
+                            }
+                            img{
+                                width: 62px;
+                                height: 62px; 
+                                position: relative;
+                                top: -10px;
+                                object-fit: cover;
+                                cursor: pointer;
+                                @media screen and (max-width: $break-large-laptop){
+                                    width: 42px;
+                                    height: 42px;
+                                    top: -8px; 
+                                }
+                            }
+                        }
                         .__s-meta{
                             margin-top: 18px;
                             a{
@@ -565,6 +562,7 @@ header{
                                 font-size: 16px;
                                 line-height: 153.7%;
                                 color: #555555;
+                  
                                 @media screen and (max-width: $break-large-laptop){
                                     font-size: 12px;
                                 }
@@ -581,7 +579,8 @@ header{
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -110px;
-    padding-top: 260px ;
+    padding-top: 310px ;
+
         .__digital-plan{
             padding: 0;
             background-color: rgba(0,0,0,0.1) ;
@@ -593,11 +592,11 @@ header{
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-gap: 15px;
-                    padding: 125px 15px;
+                    padding: 125px 0;
 
                     @media screen and (max-width: $break-large-laptop){
                         max-width: $wrap-content;
-                        padding: 100px 15px;
+                        padding: 100px 0;
                     }
 
                         .__digital-main{
@@ -623,7 +622,7 @@ header{
                                 h2{
                                     font-weight: bold;
                                     font-size: 44px;
-                                    line-height: 47px;
+                                    line-height: 54px;
                                     /* identical to box height */
                                     color: #222222;
                                    
@@ -636,7 +635,8 @@ header{
                             }
 
                             .__digital-content{
-                                margin: 18px 0 57px 0;
+                                margin: 16px 0 57px 0;
+
                                 @media screen and (max-width: $break-large-laptop){
                                     margin: 14px 0 30px 0;
                                 }
@@ -652,7 +652,7 @@ header{
                                         }
                                     }
                                     p:first-child{
-                                        margin-bottom: 20px;
+                                        margin-bottom: 24px;
 
                                         @media screen and (max-width: $break-large-laptop){
                                             margin-bottom: 14px;
@@ -802,7 +802,6 @@ header{
             }
 
                 .__our-work-title{
-                    margin-bottom: 48px;
                     text-align: center;
 
                     p{
@@ -836,17 +835,12 @@ header{
                 }
 
                 .__our-work-main{
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: row;
+                    margin: 50px 0 48px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 30px;
                     
                         .__our-work-content{
-                            flex: 1 calc(33% - 30px);
-                            margin: 15px;
-
-                            @media screen and (max-width: $break-large-laptop){
-                                margin: 10px;
-                            }
 
                                 .__our-work-img{
                                     width: 100%;
@@ -894,7 +888,7 @@ header{
                                     }
 
                                         a{
-                                            margin-bottom: 3px;
+                                       
                                             text-decoration: none;
                                             font-weight: bold;
                                             font-size: 22px;
@@ -908,6 +902,7 @@ header{
 
                                         }
                                         p{
+                                            margin-top: 3px;
                                             font-weight: 500;
                                             font-size: 16px;
                                             line-height: 153.7%;
@@ -979,12 +974,9 @@ header{
                 }
 
                 .__review-slider{
-                    // display: flex;
-                    // flex-direction: row;
-                    // flex-wrap: wrap;
                     display: grid;
                     grid-template-columns: 1fr;
-                    grid-gap: 30px;
+                    grid-gap: 40px;
 
                     @media screen and (max-width: $break-large-laptop){
                         grid-gap: 20px;
@@ -1039,11 +1031,11 @@ header{
                         }
                         .__review-slide-item{
                             // flex: 1 calc(50% - 30px);
-                            margin: 15px;
+                            margin: 0 15px;
                             background-color: white;
 
                             @media screen and (max-width: $break-large-laptop){
-                                margin: 10px; 
+                                margin: 0 10px; 
                             }
 
                             .__review-item{   
@@ -1192,8 +1184,9 @@ header{
 
 .__teams{
     background-image: url(../images/section-bg03.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 186%;
 
         .__team-wrap{
             width: $wrap;
@@ -1210,14 +1203,13 @@ header{
                     margin-bottom: 60px;
 
                     p{
-                        font-weight: 500;
-                        font-size: 15px;
-                        line-height: 142.2%;
-                        /* or 21px */
-                        letter-spacing: 0.435em;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 114.5%;
+                        letter-spacing: 0.225em;
                         text-transform: uppercase;
                         color: #7567F8;
-                        margin-bottom: 8px;
+                        margin-bottom: 14px;
 
                         @media screen and (max-width: $break-large-laptop){
                             font-size: 13px;
@@ -1238,22 +1230,16 @@ header{
                 }
 
                 .__team-work{
-                    display: flex;
-                    flex-direction: row ;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-gap: 30px;
 
                         .__team-info{
-                            flex: 1 calc(25% - 30px);
-                            margin: 15px;
-
-                            @media screen and (max-width: $break-large-laptop){
-                                margin: 10px;
-                            }
+ 
 
                                 .__team-img{
                                     width: 100%;
                                     height: 285px;
-                                    overflow: hidden;
                                     position: relative;
 
                                     @media screen and (max-width: $break-large-laptop){
@@ -1295,7 +1281,7 @@ header{
                                 }
 
                                 .__team-meta{
-                                    margin-top: 28px;
+                                    margin-top: 23px;
                                     text-align: left;
 
                                     @media screen and (max-width: $break-large-laptop){
@@ -1304,7 +1290,7 @@ header{
                                     }
 
                                     a{
-                                        margin-bottom: 4px;
+                         
                                         text-decoration: none;
                                         font-weight: bold;
                                         font-size: 24px;
@@ -1317,6 +1303,7 @@ header{
                                         }
                                     }
                                     p{
+                                        margin-top: 5px;
                                         font-weight: 500;
                                         font-size: 16px;
                                         line-height: 153.7%;
@@ -1337,9 +1324,10 @@ header{
 //Ready
 .__readys{
     // background-image:  url(../images/img_ready/bg-ready.png);
-    background-image: linear-gradient(#F4F4F4,#F4F4F4 ),url(../images/img_ready/bg-ready.png);
+    background-image: linear-gradient(rgba(255,255,255,0.9),#F4F4F4 ),url(../images/img_ready/bg-ready.png);
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
+    background-position: center;
 
     .__ready-wrap{       
         width: $wrap;
@@ -1353,7 +1341,7 @@ header{
         .__ready-main{         
             display: flex;
             flex-direction: row;          
-            padding: 63px 0 52px;
+            padding: 64px 0 53px;
             justify-content: space-between;
             align-items: center;
 
@@ -1445,6 +1433,8 @@ header{
 .__pricing-plans{
     background-image: url(../images/section-bg03.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -85%;
 
         .__pricing-wrap{
             width: $wrap;
@@ -1492,18 +1482,17 @@ header{
                 }
 
                 .__pricing-main{
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 30px;
                     
                         ._pricing-content{
                             display: grid;
                             grid-template-columns: 1fr;
                             text-align: left;
-                            flex: 1 calc(33% - 30px);
-                            margin: 15px;
                             padding: 43px 70px 59px;
                             border: 5px solid #7567F8;
+                            background-color: #FFFFFF;
 
                             @media screen and (max-width: $break-large-laptop){
                                 padding: 30px 36px;
@@ -1555,7 +1544,7 @@ header{
                                     }
                                 }
                                 .__pricing-service{
-                                    margin: 35px 0 80px;
+                                    margin: 35px 0 45px;
 
                                     @media screen and (max-width: $break-large-laptop){
                                         margin: 20px 0 40px;
@@ -1612,7 +1601,11 @@ header{
 }
 // Recent blog posts
 .__recent-posts{
-    background: #F4F4F4;
+    background-image: url(../images/section-bg03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F4F4F4;
+    background-position-y: -718px;
 
     .__recent-wrap{
         width: $wrap;
@@ -1627,11 +1620,6 @@ header{
         }
 
             .__recent-title{
-                margin-bottom: 51px;
-
-                @media screen and (max-width: $break-large-laptop){
-                    margin-bottom: 40px;
-                }
 
                 p{
                     font-weight: bold;
@@ -1641,7 +1629,7 @@ header{
                     letter-spacing: 0.225em;
                     text-transform: uppercase;
                     color: #7567F8;
-                    margin-bottom: 8px;
+                    margin-bottom: 10px;
 
                     @media screen and (max-width: $break-large-laptop){
                         font-size: 13px;
@@ -1662,13 +1650,12 @@ header{
             }
 
             .__recent-post{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 30px;
+                margin: 58px 0 70px;
 
                     .__recent-post-main{
-                        flex: 1 calc(50% - 30px);
-                        margin: 15px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -1700,7 +1687,7 @@ header{
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-                                padding: 46px 48px 66px 75px;
+                                padding: 46px 48px 56px 75px;
 
                                 @media screen and (max-width: $break-large-laptop){
                                     padding: 30px 32px 40px 56px;
@@ -1822,9 +1809,9 @@ header{
         .__digital-marketing-wrap{
             width: 80%;
             max-width: $XL;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
             margin: 0 auto;
             padding: 120px 0;
 
@@ -1833,18 +1820,12 @@ header{
                 padding: 90px 0 ;
             }
 
-                .__digital-marketing-advanted{
-                    flex: 1 calc(50% - 30px);
+                .__digital-marketing-advanted{    
                     display: flex;
                     flex-direction: column;
-                    margin: 10px;
 
-                        .__digital-marketing-title{
-                            margin: 20px 0;
-
-                            @media screen and (max-width: $break-large-laptop){
-                                margin: 15px 0;
-                            }
+                        .__digital-marketing-title{ 
+                            margin-top: 20px;
                                 p{
                                     font-weight: 500;
                                     font-size: 15px;
@@ -1853,18 +1834,18 @@ header{
                                     letter-spacing: 0.435em;
                                     text-transform: uppercase;
                                     color: #FFFFFF;
-                                    margin-bottom: 8px;
+                                    margin-bottom: 12px;
                                     
                                     @media screen and (max-width: $break-large-laptop){
                                         font-size: 12px;
                                         font-weight: 600;
-                                        margin-bottom: 4px;
+                                        margin-bottom: 8px;
                                     }
                                 }
                                 h2{
                                     font-weight: bold;
                                     font-size: 44px;
-                                    line-height: 50px;
+                                    line-height: 52px;
                                     /* identical to box height */
                                     color: #FFFFFF;
 
@@ -1876,7 +1857,7 @@ header{
                         }
 
                         .__digital-marketing-content{
-                            margin-bottom: 30px;
+                            margin: 15px 0 30px;
                                 p{
                                     font-size: 18px;
                                     line-height: 160.2%;
@@ -1927,15 +1908,14 @@ header{
                         }
                 }
                 .__digital-marketing-join{
-                    flex: 1 calc(50% - 30px);
                     display: flex;
                     flex-direction: column;
-                  
+                    align-items: flex-end;
+
                         form{
                             background-color: white;
                             max-width:  470px;
-                            margin: 0 32px;
-                            padding: 43px 45px 46px;
+                            padding: 43px 46px 46px 45px;
                             border-radius: 5px;
 
                             @media screen and (max-width: $break-large-laptop){
@@ -1945,7 +1925,6 @@ header{
 
                                 .__form-marketing-title{
                                     text-align: center;
-                                    margin-bottom: 23px;
 
                                         h2{
                                             font-weight: bold;
@@ -1953,9 +1932,10 @@ header{
                                             line-height: 128.7%;
                                             /* identical to box height, or 44px */
                                             color: #222222;
-                                            margin-bottom: 6px;
+
                                         }
                                         p{
+                                            margin: 6px 0 23px;
                                             font-weight: 500;
                                             font-size: 14px;
                                             line-height: 128.7%;
@@ -1982,7 +1962,7 @@ header{
                                         
                                         .__input-control{
                                             width: 100%;
-                                            padding: 20px 30px;
+                                            padding: 20px 24px ;
                                             font-weight: 500;
                                             font-size: 14px;
                                             line-height: 128.7%;
@@ -2003,6 +1983,7 @@ header{
                                             border: 1px solid #7567F8 ;
                                             cursor: pointer;
                                             transition: 0.5s ease;
+                                            margin-top: 10px;
 
                                                 &:hover{
                                                     background-color: rgb(14, 165, 14);
@@ -2028,7 +2009,7 @@ header{
 
                                         input{
                                             width: 100%;
-                                            padding: 20px 30px;
+                                            padding: 20px 30px ;
                                             font-weight: 500;
                                             font-size: 14px;
                                             line-height: 128.7%;
@@ -2065,7 +2046,7 @@ footer{
             background-repeat: no-repeat,no-repeat;
             background-size: cover;
             background-blend-mode: hard-light;
-            padding: 82px 0 90px;
+            padding: 82px 0 91px;
 
             @media screen and (max-width: $break-large-laptop){
                 padding: 62px 0 70px;          
@@ -2076,7 +2057,6 @@ footer{
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
 
                 @media screen and (max-width: $break-large-laptop){
                     max-width: $wrap-content;
@@ -2089,6 +2069,7 @@ footer{
 
                     p{
                         margin: 0;
+                        padding: 0;
                     }
                     p:first-child{
                         font-weight: bold;
@@ -2133,8 +2114,9 @@ footer{
                     }
                 }
                 p{
+                    margin: 0 auto;
                     max-width: 540px;
-                    margin: 21px 0 35px;
+                    padding: 16px 0 35px;
                     font-family: DM Sans;
                     font-size: 18px;
                     line-height: 160.2%;
@@ -2150,8 +2132,8 @@ footer{
                 }
                 .__links{
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1fr 1.5fr;
-                    grid-gap: 30px;
+                    grid-template-columns: 223px 1.2fr 1fr 369px;
+                    grid-gap: 78px;
 
                     @media screen and (max-width: $break-large-laptop){
                         grid-gap: 15px;
@@ -2261,13 +2243,18 @@ footer{
         }
         .__copyright{
             text-align: center;
-            padding: 45px 0;
+            padding: 36px 0 45px;
 
             @media screen and (max-width: $break-large-laptop){
                 padding: 30px 0;
             }
-                span{
-                     color:  #7567F8;
+                p{
+                    font-size: 18px;
+                    line-height: 23px;
+                    color: #000000;
+                    span{
+                        color:  #7567F8;
+                   }
                 }
         }
 }
@@ -2286,6 +2273,7 @@ footer{
     top: 0;
     display: none;
     background: rgba(0,0,0,0.5);
+    overflow: auto;
 
         .__modal-menu-right{
             height: 100vh;
@@ -2294,7 +2282,9 @@ footer{
             width: 340px ;
             position: relative;
             left: calc(100% - 340px);
-            animation: toright 1s ease-in-out;
+            animation: toright 0.8s ease;
+            background-color: #7567F8; 
+            padding-bottom: 60px;
             @keyframes toright {
                 from{
                     transform: translateX(100%);
@@ -2308,8 +2298,7 @@ footer{
                     width: 100%;                         
                     display: flex;
                     flex-direction: column;                
-                    background-color: #7567F8; 
-                    padding-bottom: 60px;                
+                               
 
                         .__modal-menu-title{
                             padding: 10px 16px ;
@@ -2317,8 +2306,8 @@ footer{
                             flex-direction: row;
                             justify-content: space-between;
                             align-items: center;
-                            border-bottom: 1px solid #555555;
-                            background-color: #D7DB17;
+                            border-bottom: 1px solid #999999;
+                            background-color: #FFFFFF;
                             
                                 h2{
                                     font-family: 'DM Sans';
@@ -2334,8 +2323,8 @@ footer{
                         }
                         .__modal-menu-content{
                             padding: 10px 16px ;
-                            border-bottom: 1px solid #555555;
-                            background-color: #D7DB17;
+                            border-bottom: 1px solid #999999;
+                            background-color: #FFFFFF;
 
                             h2{
                                 font-family: 'DM Sans';
