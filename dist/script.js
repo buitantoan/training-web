@@ -33,7 +33,7 @@
     $('#mouse').click(function(e){
         e.preventDefault();
         $("body, html").animate({
-            scrollTop:   $('#services').offset().top
+            scrollTop:   $('#services').offset().top - 100
         },800 );
     });
         
