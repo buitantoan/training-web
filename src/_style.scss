@@ -591,8 +591,8 @@ header{
                     margin: 0 auto;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    grid-gap: 15px;
-                    padding: 125px 0;
+                    grid-gap: 35px;
+                    padding: 121px 0 125px;
 
                     @media screen and (max-width: $break-large-laptop){
                         max-width: $wrap-content;
