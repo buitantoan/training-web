@@ -199,16 +199,20 @@ header{
                 @media screen and (max-width: $break-large-tablet){
                     flex-basis: 100%;
                 }
-                    a{
-                        margin-left: 5px;
-                        letter-spacing: 0.05em;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        font-size: 13px;
-                        line-height: 17px;
-                        color: #7567F8;
-                        text-decoration: none;
-                        
+                    div{
+                        display: flex;
+                        align-items: center;
+                        a{
+                            margin-left: 5px;
+                            letter-spacing: 0.05em;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            font-size: 13px;
+                            line-height: 17px;
+                            color: #7567F8;
+                            text-decoration: none;
+                            
+                        }
                     }
                     p{
                         letter-spacing: 0.05em;
@@ -222,9 +226,12 @@ header{
                     @media screen and (max-width: $break-large-laptop){
                         justify-content: center;
 
-                        a{
-                            font-size: 11px;
-                            margin-left: 4px;
+                        div{
+
+                            a{
+                                font-size: 11px;
+                                margin-left: 4px;
+                            }
                         }
                         p{
                             font-size: 11px;
@@ -1607,7 +1614,7 @@ header{
     background-image: url(../images/section-bg03.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -85%;
+    background-position-y: -80%;
 
     @media screen and (max-width: $break-large-laptop){
         background-position-y: 120px;
@@ -2505,9 +2512,9 @@ footer{
             text-align: center;
             padding: 36px 0 45px;
 
-            @media screen and (max-width: $break-large-laptop){
-                padding: 30px 0;
-            }
+                .__social{
+                    display:none;
+                }           
                 p{
                     font-size: 18px;
                     line-height: 23px;
@@ -2516,6 +2523,47 @@ footer{
                         color:  #7567F8;
                    }
                 }
+            @media screen and (max-width: $break-large-laptop){
+                padding: 30px 0;
+            }
+            @media screen and (max-width: $break-large-tablet){
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .__social{
+                    display: inline-flex;
+
+                        a{
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            color: #FFFFFF;
+                            margin: 5px;
+                                i{
+                                font-size: 16px;  
+                                }
+                            
+                                &:nth-child(1){
+                                    background-color: #186CB0;
+                                }
+                                &:nth-child(2){
+                                    background-color: #E22E04;
+                                }
+                                &:nth-child(3){
+                                    background-color: #074682;
+                                }
+                                &:nth-child(4){
+                                    background-color:  #00B3D3;
+                                }
+                        }
+                        
+                } 
+            }
         }
 }
 //Modal Menu
@@ -2659,12 +2707,22 @@ footer{
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
-                                        background-color: #074682;
                                         color: #ffffff;
                                         
                                         &:hover{
-                                            color: #E22E04;
-                                         
+                                            color: #E22E04;                                     
+                                        }
+                                        &:nth-child(1){
+                                            background-color: #186CB0;
+                                        }
+                                        &:nth-child(2){
+                                            background-color: #E22E04;
+                                        }
+                                        &:nth-child(3){
+                                            background-color: #074682;
+                                        }
+                                        &:nth-child(4){
+                                            background-color:  #00B3D3;
                                         }
                                         
                                     }                                  
@@ -2716,7 +2774,7 @@ footer{
 
         .closebtn {
             position: absolute;
-            top: 20px;
+            top: 0;
             right: 45px;
             font-size: 60px;
             cursor: pointer;
