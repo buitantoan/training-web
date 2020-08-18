@@ -54,10 +54,9 @@ body{
             color: #7567f8;
         }
     @media screen and (max-width: $break-large-laptop){
-        width: 158px;
-        height: 48px;
+        width: 156.75px;
+        height: 51px;
         font-size: 10px;
-        font-weight: 600;
         border: 4px solid #7567F8;
 
             &:hover{
@@ -65,10 +64,9 @@ body{
             }
     }
     @media screen and (max-width: $break-large-tablet){
-        width: 140px;
-        height: 40px;
-        font-size: 11px;
-        font-weight: 500;
+        width: 130px;
+        height: 38px;
+        font-size: 10px;
         border: 3px solid #7567F8;
 
             &:hover{
@@ -76,10 +74,6 @@ body{
             }
     }
     @media screen and (max-width: $break-large-phone){
-        width: 140px;
-        height: 40px;
-        font-size: 10px;
-        font-weight: 500;
         border: 2px solid #7567F8;
 
             &:hover{
@@ -108,16 +102,56 @@ body{
     }
     @media screen and (max-width: $break-large-laptop){
         font-size: 12px;
-        font-weight: 600;
-        margin-left: 36px;
+        margin-left: 24px;
     }
     @media screen and (max-width: $break-large-tablet){
-        font-size: 11px;
-        font-weight: 500;
-        margin-left: 20px;
-    }
-    @media screen and (max-width: $break-large-phone){
         font-size: 10px;
+        margin-left: 13px;
+    }
+
+    
+}
+//title
+.__title{
+ 
+    p{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 142.2%;
+        /* or 21px */
+        letter-spacing: 0.225em;
+        text-transform: uppercase;
+        color: #7567F8;
+        margin-bottom: 8px;
+
+        @media screen and (max-width: $break-large-laptop){
+            font-size: 15px;
+        }      
+        @media screen and (max-width: $break-media-laptop){
+            font-size: 10.75px;
+        }  
+        // @media screen and (max-width: $break-large-tablet){
+        //     font-size: 8px;
+        // }                          
+    }
+    h2{
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 54px;
+        /* identical to box height */
+        color: #222222;
+       
+        @media screen and (max-width: $break-large-laptop){
+            font-size: 38px;
+            line-height: 45px;
+        }
+        @media screen and (max-width: $break-media-laptop){
+            font-size: 27px;
+            line-height: 45px;
+        }
+        // @media screen and (max-width: $break-large-tablet){
+        //     font-size: 20px;
+        // }
     }
 }
 //
@@ -133,11 +167,11 @@ header{
     box-sizing: border-box;
 
     @media screen and (max-width: $break-large-laptop){
-        grid-template-rows: 80px;
+        grid-template-rows: 74px;
     }
     @media screen and (max-width: $break-large-phone){
         grid-template-columns: 227px 1fr;
-        grid-template-rows: 60px;
+        grid-template-rows: 54px;
     }
 
     .__join-us{
@@ -217,9 +251,7 @@ header{
                 flex-basis: 55%;
                 display: flex;
                 align-items: center;
-                @media screen and (max-width: $break-large-tablet){
-                    flex-basis: 100%;
-                }
+
                     div{
                         display: flex;
                         align-items: center;
@@ -259,9 +291,15 @@ header{
                         }                     
                     }
                     @media screen and (max-width: $break-media-laptop){
+                        display: flex;
+                        flex-direction: column;
                         p{
                             font-size: 10px;
                         }
+                    }
+                    @media screen and (max-width: $break-large-tablet){
+                        flex-basis: 100%;
+                        flex-direction: row;
                     }
                     
             }
@@ -295,11 +333,12 @@ header{
                         right:  -15px;
                     }
                     @media screen and (max-width: $break-large-laptop){
-                        font-size: 28px;
-
+                        font-size: 27px;
+                 
                         &::after{
                             width: 8px;
                             height: 8px;
+                            bottom: 12px;
                         }
                     }
                     @media screen and (max-width: $break-large-phone){
@@ -320,9 +359,11 @@ header{
                     letter-spacing: 0.315em;
                     text-transform: uppercase;
                     color: #999999;
+                    margin-top: 10px;
 
                     @media screen and (max-width: $break-large-laptop){
                         font-size: 11px;
+                        margin-top: 8px;
                     }
                     @media screen and (max-width: $break-large-phone){
                         font-size: 10px;
@@ -347,12 +388,11 @@ header{
                         }
                         button{
                             width: 106px;
-                            height: 100%;
+                            height: 103%;
                             background: #7567F8;
                             border: 1px solid #7567f8;
                             cursor: pointer;
-
-                            
+                      
                         }
                         p{
                             margin: 0 52px 0 48px;
@@ -365,7 +405,7 @@ header{
                         @media screen and (max-width: $break-large-laptop){
                             
                             button{
-                                width: 82px;
+                                width: 80px;
 
                                 @media screen and (max-width: $break-media-phone){
                                     width: 72px;
@@ -394,11 +434,11 @@ header{
 //end header
 .__section-heros{
     background-image: url("../images/section-bg.png");
-    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 98px;
+    background-position: 68% 32%;
 
     @media screen and (max-width: $break-large-laptop){
         padding-top: 80px;
@@ -429,28 +469,45 @@ header{
 
             img{               
                 position: relative;
-                top: -12%;
+                top: -97px;
                 width: 100%;
-                object-fit: cover;              
+                object-fit: cover;
+
+                @media screen and (max-width: $break-large-laptop){
+                    top: -74px;
+                }
+                @media screen and (max-width: $break-media-laptop){
+                    top: -52px;
+                }  
+                @media screen and (max-width: $break-large-tablet){
+                    top: -39px;
+                }           
             }
+            
             @media screen and (max-width: $break-large-phone){
                 padding-right: 0;
-                top: -6%;
+                top: -8%;
             }
         }
         .__content-hero{
             grid-area: __content-hero;
             position: relative;
-            top: 23%;
+            top: 155px;
+            @media screen and (max-width: $break-large-laptop){
+                top: 116.25px;
+            }
+            @media screen and (max-width: $break-media-laptop){
+                top: 82.66px;
+            }
             @media screen and (max-width: $break-large-tablet){
-                top: 18%;
+                top: 62px;
             }
             @media screen and (max-width: $break-large-phone){
                 top: 0;
             }
                 .__img{
                     position: absolute;
-                    top: -30%;
+                    top: -26%;
                     left: 40%;
                     transform: translate(-40%);
                     z-index: -1;
@@ -488,7 +545,7 @@ header{
                             }
                         }
                         h2{
-                            font-size: 41px;
+                            font-size: 48px;
                             color: #222222;
                             line-height: 142.2%;                       
 
@@ -496,10 +553,13 @@ header{
                                     color: #7567F8;
                                 }
                             @media screen and (max-width: $break-large-laptop){
-                                font-size: 30px;
+                                font-size: 36px;
+                            }
+                            @media screen and (max-width: $break-media-laptop){
+                                font-size: 26px;
                             }
                             @media screen and (max-width: $break-large-tablet){
-                                font-size: 20px;
+                                font-size: 19px;
                             }
                         }
                 }
@@ -616,9 +676,13 @@ header{
                     height: 52px;
                     object-fit: cover;
                     cursor: pointer;
-                    @media screen and (max-width: $break-large-phone){
+                    @media screen and (max-width: $break-large-laptop){
                         width: 40px;
                         height: 40px;
+                    }
+                    @media screen and (max-width: $break-large-tablet){
+                        width: 28px;
+                        height: 28px;
                     }            
                 }
             }
@@ -649,42 +713,13 @@ header{
             width: $wrap-large-tablet;
             padding: 0 16px;
         }
-            .__s-title{
+            .__title{
                 text-align: center;
                 margin: 59px 0;
                 @media screen and (max-width: $break-large-phone){
                     margin: 40px 0;
                 }   
-                    p{
-                        color: #7567F8;
-                        font-weight: bold;
-                        font-size: 15px;
-                        line-height: 114.5%;
-                        letter-spacing: 0.225em;
-                        text-transform: uppercase;
-                        margin-bottom: 8px;
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 13px;
-                        }
-                        @media screen and (max-width: $break-large-phone){
-                            font-size: 11px;
-                        }
-                    }
-                    h2{
-                        color: #222222;
-                        font-weight: bold;
-                        font-size: 44px;
-                        line-height: 114.5%;
-                      
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 32px;
-                        }
-                        @media screen and (max-width: $break-large-phone){
-                            font-size: 26px;
-                        }
-                    }
+                    
             }
             .__s-contents{
                 margin: 0 auto;
@@ -748,6 +783,7 @@ header{
                                 font-size: 16px;
                                 line-height: 153.7%;
                                 color: #555555;
+                                font-family: 'DM Sans';
                   
                                 @media screen and (max-width: $break-large-laptop){
                                     font-size: 12px;
@@ -806,44 +842,7 @@ header{
                         .__digital-main{
                            font-family: 'DM Sans'; 
 
-                            .__digital-title{
-
-                                p{
-                                    font-weight: 500;
-                                    font-size: 15px;
-                                    line-height: 142.2%;
-                                    /* or 21px */
-                                    letter-spacing: 0.435em;
-                                    text-transform: uppercase;
-                                    color: #7567F8;
-                                    margin-bottom: 8px;
-
-                                    @media screen and (max-width: $break-large-laptop){
-                                        font-size: 13px;
-                                        font-weight: 600;
-                                    }                                  
-                                    @media screen and (max-width: $break-large-phone){
-                                        font-size: 11px;
-                                    }
-                     
-                                }
-                                h2{
-                                    font-weight: bold;
-                                    font-size: 44px;
-                                    line-height: 54px;
-                                    /* identical to box height */
-                                    color: #222222;
-                                   
-
-                                    @media screen and (max-width: $break-large-laptop){
-                                        font-size: 32px;
-                                        line-height: 45px;
-                                    }
-                                    @media screen and (max-width: $break-large-phone){
-                                        font-size: 26px;
-                                    }
-                                }
-                            }
+                            
 
                             .__digital-content{
                                 margin: 16px 0 57px 0;
@@ -937,10 +936,11 @@ header{
 
 //Funfacts
 .__funfacts{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
     @media screen and (max-width: $break-large-phone){
-        flex-direction: column;
+        grid-template-columns: 1fr ;
     }
 
         .__funfacts-conversation{
@@ -955,7 +955,6 @@ header{
             background: #6253EE;
         }
         .__funfact-item{
-            flex-basis: 33%;
             padding: 93px 0;
             text-align: center;
 
@@ -1034,44 +1033,8 @@ header{
             @media screen and (max-width: $break-large-phone) {
                 padding: 45px 16px;
             }
-                .__our-work-title{
+                .__title{
                     text-align: center;
-
-                    p{
-                        font-weight: 500;
-                        font-size: 15px;
-                        line-height: 142.2%;
-                        /* or 21px */
-                        letter-spacing: 0.435em;
-                        text-transform: uppercase;
-                        color: #7567F8;
-                        margin-bottom: 8px;
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 13px;
-                            font-weight: 600;
-                        }
-                        @media screen and (max-width: $break-large-phone) {
-                            font-size: 11px;
-                            margin-bottom: 0;
-                        }
-                    }
-                    h2{
-                        font-weight: bold;
-                        font-size: 44px;
-                        line-height: 47px;
-                        /* identical to box height */
-                        color: #222222;
-                    
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 32px;
-                        }
-                        @media screen and (max-width: $break-large-phone) {
-                            font-size: 26px;
-                        }
-
-                    }
                 }
 
                 .__our-work-main{
@@ -1209,7 +1172,7 @@ header{
             @media screen and (max-width: $break-large-phone) {
                 padding: 50px 16px;
             }
-                .__review-title{
+                .__title{
                     margin-bottom: 49px;
                     text-align: center;
                     @media screen and (max-width: $break-large-laptop){
@@ -1219,39 +1182,6 @@ header{
                         margin-bottom: 30px;
                     }
 
-                    p{
-                        font-weight: 500;
-                        font-size: 15px;
-                        line-height: 142.2%;
-                        /* or 21px */
-                        letter-spacing: 0.435em;
-                        text-transform: uppercase;
-                        color: #7567F8;
-                        margin-bottom: 8px;
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 13px;
-                            font-weight: 600;
-                        }
-                        @media screen and (max-width: $break-large-phone) {
-                            font-size: 11px;
-                            margin-bottom: 0;
-                        }
-                    }
-                    h2{
-                        font-weight: bold;
-                        font-size: 44px;
-                        line-height: 47px;
-                        /* identical to box height */
-                        color: #222222;
-                                         
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 32px;
-                        }
-                        @media screen and (max-width: $break-large-phone) {
-                            font-size: 26px;
-                        }
-                    }
                 }
 
                 .__review-slider{
@@ -1292,18 +1222,19 @@ header{
                                             border: 1px solid #C4C4C4;
                                             
                                         }
-                                        // @media screen and (max-width: $break-large-laptop){
-                                        //     width: 9px;
-                                        //     height: 9px;
-                                          
-                                        // }
+
                                     }
                                 }
                                 li.slick-active{
                                     button{
-                                                                          
+                                        width: 11px;
+                                        height: 11px;
+
                                         &::before{
+                                            width: 100%;
+                                            height: 100%;
                                             background: #7567F8;
+                                            border: 1px solid #7567F8;
                                         }
                                     }
                                 } 
@@ -1408,6 +1339,7 @@ header{
                                         line-height: 160.2%;
                                         /* or 26px */
                                         color: #555555;
+                                        font-family: 'DM Sans';
 
                                         @media screen and (max-width: $break-large-laptop){
                                             font-size: 12px;
@@ -1455,6 +1387,8 @@ header{
                                             
                                             .__review-meta-info-star{
                                                 display: flex;
+                                                align-self: flex-start;
+
                                                 i{
                                                     font-weight: 900;
                                                     font-size: 13px;
@@ -1481,10 +1415,10 @@ header{
     background-image: url(../images/section-bg03.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 182%;
+    background-position:50% 183%;
 
     @media screen and (max-width: $break-large-laptop){
-        background-position-y: -450px;
+        background-position:50% 208%;
     }
 
         .__team-wrap{
@@ -1508,7 +1442,7 @@ header{
             @media screen and (max-width: $break-large-phone){
                 padding: 50px 16px ;    
             }
-                .__team-title{
+                .__title{
                     margin-bottom: 60px;
                     @media screen and (max-width: $break-large-tablet) {
                         margin-bottom: 40px;
@@ -1516,38 +1450,7 @@ header{
                     @media screen and (max-width: $break-large-phone){
                         margin-bottom: 30px;   
                     }
-                    p{
-                        font-weight: bold;
-                        font-size: 20px;
-                        line-height: 114.5%;
-                        letter-spacing: 0.225em;
-                        text-transform: uppercase;
-                        color: #7567F8;
-                        margin-bottom: 14px;
 
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 13px;
-                            font-weight: 600;
-                        }
-                        @media screen and (max-width: $break-large-phone){
-                            font-size: 11px;  
-                            margin-bottom: 0;
-                        }
-                    }
-                    h2{
-                        font-weight: bold;
-                        font-size: 44px;
-                        line-height: 47px;
-                        /* identical to box height */
-                        color: #222222;
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 32px;
-                        }
-                        @media screen and (max-width: $break-large-phone){
-                            font-size: 24px;  
-                        }
-                    }
                 }
 
                 .__team-work{
@@ -1670,6 +1573,10 @@ header{
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
     background-position: center;
+    background-size: contain;
+    @media screen and (max-width: $break-media-laptop) {
+        background-size: cover;
+    }
 
     .__ready-wrap{       
         width: $wrap;
@@ -1723,24 +1630,24 @@ header{
                             object-fit: cover;
                         }
                         @media screen and (max-width: $break-large-laptop){
-                            width: 82px;
-                            height: 82px;
+                            width: 84px;
+                            height: 84px;
                             margin-right: 20px;
 
                             img{    
-                                width: 40px;
-                                height: 40px;                 
+                                width: 37.5px;
+                                height: 37.5px;                 
                                 object-fit: cover;
                             }
                         }
                         @media screen and (max-width: $break-large-tablet){
-                            width: 72px;
-                            height: 72px;
+                            width: 44.8px;
+                            height: 44.8px;
                             margin-right: 20px;
 
                             img{    
-                                width: 30px;
-                                height: 30px;                 
+                                width: 20px;
+                                height: 20px;                 
                                 object-fit: cover;
                             }
                         }
@@ -1750,7 +1657,7 @@ header{
     
                         h2{
                             font-weight: bold;
-                            font-size: 44px;
+                            font-size: 40px;
                             line-height: 128.7%;
                             /* or 51px */
                             color: #222222;
@@ -1759,7 +1666,7 @@ header{
                                 font-size: 28px;
                             }
                             @media screen and (max-width: $break-large-tablet){
-                                font-size: 20px;
+                                font-size: 18px;
                             }
                         }
                         p{
@@ -1769,7 +1676,7 @@ header{
                             color: #555555;
 
                             @media screen and (max-width: $break-large-laptop){
-                                font-size: 13px;
+                                font-size: 13.5px;
                             }
                             @media screen and (max-width: $break-large-tablet){
                                 font-size: 11px;
@@ -1783,7 +1690,7 @@ header{
                     align-items: center;
 
                     a{
-                        padding: 20px 39px;
+                        padding: 18px 43px;
                         text-align: center;
                         text-decoration: none;
                         font-weight: bold;
@@ -1796,13 +1703,12 @@ header{
                         margin-right: 17px;
 
                         @media screen and (max-width: $break-large-laptop){
-                            font-size: 10px;
+                            font-size: 10.05px;
                             margin-right: 12px;
-                            padding: 12px 32px;
+                            padding: 13.5px 32.25px;
                             border: 4px solid #7567F8;
                         }
                         @media screen and (max-width: $break-large-tablet){
-                            font-size: 11px;
                             padding: 10px 30px;
                             border: 3px solid #7567F8;
                         }
@@ -1818,10 +1724,10 @@ header{
     background-image: url(../images/section-bg03.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -80%;
+    background-position: 50% -98%;
 
     @media screen and (max-width: $break-large-laptop){
-        background-position-y: 120px;
+        background-position: 50% -188%;
     }
 
         .__pricing-wrap{
@@ -1833,46 +1739,27 @@ header{
 
             @media screen and (max-width: $break-large-laptop){
                 width: $wrap-large-laptop;
-                padding: 70px 0 80px;
+                padding: 87px 0 90.75px;
             }
             @media screen and (max-width: $break-media-laptop) {
                 width: $wrap-media-laptop;
+                padding: 61px 0 64.5px;
             }
             @media screen and (max-width: $break-large-tablet){
                 width: $wrap-large-tablet;
-                padding: 60px 16px 70px;
+                padding: 46.4px 16px 48.4px;
             }
-                .__pricing-titile{
+                .__title{
                     margin-bottom: 59px;
+                    text-align: center;
 
                     @media screen and (max-width: $break-large-laptop){
-                        margin-bottom: 30px;
+                        margin-bottom: 44.25px;
+                    }
+                    @media screen and (max-width: $break-media-laptop){
+                        margin-bottom: 31.47px;
                     }
 
-                    p{
-                        font-weight: bold;
-                        font-size: 20px;
-                        line-height: 114.5%;
-                        /* or 21px */
-                        letter-spacing: 0.225em;
-                        text-transform: uppercase;
-                        color: #7567F8;
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 13px;
-                        }
-                    }
-                    h2{
-                        font-weight: bold;
-                        font-size: 44px;
-                        line-height: 47px;
-                        /* identical to box height */
-                        color: #222222;
-
-                        @media screen and (max-width: $break-large-laptop){
-                            font-size: 30px;
-                        }
-                    }
                 }
 
                 .__pricing-main{
@@ -1881,27 +1768,30 @@ header{
                     grid-gap: 30px;
 
                     @media screen and (max-width: $break-large-laptop){
-                        grid-gap: 20px;
+                        grid-gap: 22.5px;
                         
                     }
                     @media screen and (max-width: $break-large-phone){
                         grid-template-columns: 1fr;
-                        
+                        grid-gap: 18px;
                     }
                     
                         ._pricing-content{   
                             position: relative;                        
                             text-align: left;
-                            padding: 43px 70px 59px;
+                            padding: 38px 70px 54px 71px;
                             border: 5px solid #7567F8;
                             background-color: #FFFFFF;
                        
                             @media screen and (max-width: $break-large-laptop){
-                                padding: 28px 34px;
+                                padding: 28.5px 56.25px 40.5px 57px;
                                 border: 4px solid #7567F8;
                             }
+                            @media screen and (max-width: $break-media-laptop){
+                                padding: 20.3px 37.3px 28.8px 37.9px;
+                            }
                             @media screen and (max-width: $break-large-phone){
-                                width: 250px;
+                                // padding: 15.2px 30px 23.6px 30.04px;
                                 margin:0 auto;
                                 display: flex;
                                 flex-direction: column;
@@ -1911,27 +1801,43 @@ header{
                                 .__pricing-money{
                                     margin-bottom: 35px;
                                     @media screen and (max-width: $break-large-laptop){
-                                        margin-bottom: 15px;
+                                        margin-bottom: 26.25px;
+                                    }
+                                    @media screen and (max-width: $break-media-laptop){
+                                        margin-bottom: 18.66px;
                                     }
 
                                     p:nth-child(1){
                                         font-size: 24px;
-                                        
+                                        /* or 32px */
+                                        line-height: 133.2%;
                                         span{
                                             font-weight: bold;
-                                            font-size: 36px;
+                                            font-size: 45px;
                                             line-height: 133.2%;   
                                                                            
                                         }
                                         @media screen and (max-width: $break-large-laptop){
-                                            font-size: 16px;
+                                            font-size: 18px;
+                                            line-height: 24px;
+
                                             span{
-                                                font-size: 30px;
+                                                font-size: 37.5px;
+                                          
+                                            }
+                                        }
+                                        @media screen and (max-width: $break-media-laptop){
+                                            font-size: 12.8px;
+                                            line-height: 24px;
+
+                                            span{
+                                                font-size: 24px;
+                                          
                                             }
                                         }
                                     }
                                     p:nth-child(2){
-                                        margin: 17px 0 13px;
+                                        margin: 14px 0 13px;
                                         font-weight: bold;
                                         font-size: 14px;
                                         line-height: 160.2%;
@@ -1942,7 +1848,8 @@ header{
 
                                         @media screen and (max-width: $break-large-laptop){
                                             font-size: 10px;
-                                            margin: 6px 0 ;
+                                            margin: 10px 0 9px;
+                                           
                                         }
                                     }
                                     p:nth-child(3){
@@ -1952,7 +1859,10 @@ header{
                                         color: #222222;
 
                                         @media screen and (max-width: $break-large-laptop){
-                                            font-size: 16px;
+                                            font-size: 18px;
+                                        }
+                                        @media screen and (max-width: $break-media-laptop){
+                                            font-size: 13px;
                                         }
                                     }
                                 }
@@ -1962,13 +1872,13 @@ header{
                                     flex-direction: column;
                                     // align-items: flex-start;
                                     @media screen and (max-width: $break-large-laptop){
-                                        margin-bottom: 75px;
+                                        margin-bottom: 80.25px;
                                     }
 
                                         p{
                                             font-size: 16px;
-                                            line-height: 216.7%;
-                                            font-weight: 500;
+                                            line-height: 35px;
+                        
 
                                             &::before{
                                                 content: '\f152 ';
@@ -1986,14 +1896,15 @@ header{
                                 }
                                 .__pricing-now{
                                     position: absolute;
-                                    bottom: 59px;
+                                    bottom: 54px;
                                     @media screen and (max-width: $break-large-laptop){
-                                        bottom: 28px;                                        
+                                        bottom: 40.05px;                                        
                                     }
                                 }
                             &:hover{
-                            background-color: #7567F8;
-                            color: white;
+                                transition: 0.4s ease-in-out;
+                                background-color: #7567F8;
+                                color: white;
                             
                                     .__pricing-money{
                                         p{
@@ -2024,9 +1935,9 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #F4F4F4;
-    background-position-y: -718px;
+    background-position: 50% 489%;
     @media screen and (max-width: $break-large-laptop){
-        background-position-y: -462px;
+        background-position: 50% 606%;
     }
 
     .__recent-wrap{
@@ -2050,47 +1961,15 @@ header{
         @media screen and (max-width: $break-large-phone){
             padding: 50px 16px;
         }
-            .__recent-title{
-
-                p{
-                    font-weight: bold;
-                    font-size: 20px;
-                    line-height: 114.5%;
-                    /* or 21px */
-                    letter-spacing: 0.225em;
-                    text-transform: uppercase;
-                    color: #7567F8;
-                    margin-bottom: 10px;
-
-                    @media screen and (max-width: $break-large-laptop){
-                        font-size: 13px;
-                    }
-                    @media screen and (max-width: $break-large-phone){
-                        font-size: 11px;
-                        margin-bottom: 5px;
-                    }
-                }
-                h2{
-                    font-weight: bold;
-                    font-size: 44px;
-                    line-height: 47px;
-                    /* identical to box height */
-                    color: #222222;
-
-                    @media screen and (max-width: $break-large-laptop){
-                        font-size: 32px;
-                    }
-                    @media screen and (max-width: $break-large-phone){
-                        font-size: 26px;
-                    }
-                }
+            .__title{
+                margin-bottom: 58px;
+                text-align: center;
             }
 
             .__recent-post{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 30px;
-                margin: 58px 0 70px;
                 
                 @media screen and (max-width: $break-large-laptop){
                     grid-gap: 20px;
@@ -2205,8 +2084,7 @@ header{
                                             line-height: 132.7%;
                                             /* or 40px */
                                             color: #FFFFFF; 
-                                            margin: 7px 0 17px; 
-                                            letter-spacing: 1px;
+                                            margin: 7px 0 17px;                                     
                                             
                                             @media screen and (max-width: $break-large-laptop){
                                                 font-size: 18px;
@@ -2290,39 +2168,21 @@ header{
                     @media screen and (max-width: $break-large-phone){
                         align-items: center;
                     }
-                        .__digital-marketing-title{ 
+                        .__title{ 
                             margin-top: 20px;
 
                             @media screen and (max-width: $break-large-phone){
                                 text-align: center;
                             }
                                 p{
-                                    font-weight: 500;
-                                    font-size: 15px;
-                                    line-height: 142.2%;
-                                    /* or 21px */
-                                    letter-spacing: 0.435em;
-                                    text-transform: uppercase;
                                     color: #FFFFFF;
+                                    font-size: 15px;
                                     margin-bottom: 12px;
-                                    
-                                    @media screen and (max-width: $break-large-laptop){
-                                        font-size: 12px;
-                                        font-weight: 600;
-                                        margin-bottom: 8px;
-                                    }
+                                    letter-spacing: 0.435em;
                                 }
                                 h2{
-                                    font-weight: bold;
-                                    font-size: 44px;
-                                    line-height: 52px;
-                                    /* identical to box height */
                                     color: #FFFFFF;
-
-                                    @media screen and (max-width: $break-large-laptop){
-                                        font-size: 30px;
-                                        line-height: 45px;
-                                    }
+                                    line-height: 60px;
                                 }
                         }
 
@@ -2337,6 +2197,7 @@ header{
                                     line-height: 160.2%;
                                     /* or 29px */
                                     color: #FFFFFF;
+                                    font-family: 'DM Sans';
                                 }
                                 @media screen and (max-width: $break-large-laptop){
                                     margin-bottom: 20px;
@@ -2350,7 +2211,7 @@ header{
                             margin-bottom: 60px;
 
                             p{
-                              
+                                font-family: 'DM Sans';
                                 font-size: 18px;
                                 line-height: 160.2%;
                                 /* or 29px */
@@ -2444,6 +2305,7 @@ header{
                                             font-size: 14px;
                                             line-height: 128.7%;
                                             /* identical to box height, or 18px */
+                                            font-family: 'DM Sans';
                                             color: #999999;
                                             background: #F7F5F5;
                                             border: 1px solid #F7F5F5 ;
@@ -2452,6 +2314,7 @@ header{
                                         .submit{
                                             font-weight: bold;
                                             font-size: 15px;
+                                            font-family: 'DM Sans';
                                             line-height: 160.2%;
                                             /* identical to box height, or 24px */
                                             text-transform: uppercase;
@@ -2489,6 +2352,7 @@ header{
                                             padding: 20px 30px ;
                                             font-weight: 500;
                                             font-size: 14px;
+                                            font-family: 'DM Sans';
                                             line-height: 128.7%;
                                             /* identical to box height, or 18px */
                                             color: #999999;
@@ -2519,7 +2383,7 @@ footer{
 
         .__bg-infomation-us{
             width: 100%;
-            background-image: linear-gradient(#F4F4F4,rgba(255,255,255,0.6) ),url(../images/cambioGenerazionale-bg-footer.png);
+            background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url(../images/cambioGenerazionale-bg-footer.png);
             background-repeat: no-repeat,no-repeat;
             background-size: cover;
             background-blend-mode: hard-light;
@@ -2578,11 +2442,12 @@ footer{
                             right:  -15px;
                         }
                         @media screen and (max-width: $break-large-laptop){
-                            font-size: 28px;
+                            font-size: 27px;
 
                             &::after{
                                 width: 8px;
                                 height: 8px;
+                                bottom: 12px;
                             }
                         }
                     }
@@ -2596,8 +2461,10 @@ footer{
                         text-transform: uppercase;
                         color: #999999;
                         text-align: left;
+                        margin-top: 10px;
 
                         @media screen and (max-width: $break-large-laptop){
+                            margin-top: 8px;
                             font-size: 11px;
                         }
                     }
@@ -2700,6 +2567,9 @@ footer{
                                 color: #7567F8;
                                 margin-bottom: 17px;
 
+                                span{
+                                    font-weight: 400;
+                                }
                                 @media screen and (max-width: $break-large-laptop){
                                     font-size: 18px;
                                     margin-bottom: 6px;
@@ -2717,7 +2587,7 @@ footer{
                                     line-height: 128.7%;
                                     color: #999999;
                                     outline: none;
-                                    border: 1px solid #eaeaea;
+                                    border: 1px solid #F7F5F5;
                                     position: relative;
                                 }
                                 span{
@@ -2784,6 +2654,7 @@ footer{
                     font-size: 18px;
                     line-height: 23px;
                     color: #000000;
+                    font-family: 'DM Sans';
                     span{
                         color:  #7567F8;
                    }
