@@ -930,6 +930,8 @@ header{
                                         @keyframes plsying {
                                             0%{                                            
                                                 box-shadow: 0 0 0 0 crimson ;
+                                                background-color: crimson;
+                                                transform: scale(1.1);
                                             }
                                             40%{
                                                 box-shadow: 0 0 0 25px rgba(255, 26, 67, 0);
