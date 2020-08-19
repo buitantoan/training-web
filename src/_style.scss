@@ -1502,6 +1502,7 @@ header{
                     }                
                     @media screen and (max-width: $break-media-phone){
                         grid-template-columns: 1fr;
+                        grid-gap: 30px;
                     }
                         .__team-info{
  
@@ -1756,6 +1757,10 @@ header{
                         @media screen and (max-width: $break-large-tablet){
                             border: 3px solid #7567F8;
                         }
+                        @media screen and (max-width: $break-large-phone){
+                            padding: 10px 31.235px;
+                            border: 2px solid #7567F8;
+                        }
                         
                     }
                 }
@@ -1933,9 +1938,11 @@ header{
                                         margin-bottom: 82px;
                                     }
 
-                                        p{
+                                        a{
+                                            text-decoration: none;
                                             font-size: 16px;
                                             line-height: 35px;
+                                            color: #222;
                         
                                             &::before{
                                                 content: '\f152 ';
@@ -1995,7 +2002,7 @@ header{
                                         }
                                     }
                                     .__pricing-service{
-                                        p{
+                                        a{
                                             color: white;
                                             &::before{
                                                 color: white;
