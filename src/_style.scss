@@ -923,6 +923,24 @@ header{
                                         outline: none;
                                         cursor: pointer;
 
+                                        img{
+                                            animation: plsying 1.5s infinite;
+                                            border-radius: 50%;
+                                        }
+                                        @keyframes plsying {
+                                            0%{                                            
+                                                box-shadow: 0 0 0 0 crimson ;
+                                            }
+                                            40%{
+                                                box-shadow: 0 0 0 25px rgba(255, 26, 67, 0);
+                                            }
+                                            80%{
+                                                box-shadow: 0 0 0 25px rgba(255, 206, 67, 0);
+                                            }
+                                            100%{                                            
+                                                box-shadow: 0 0 0 0 rgba(255, 206, 67, 0) ;
+                                            }
+                                        }
                                         @media screen and (max-width: $break-large-laptop){
                                             img{
                                                 width: 64%;
