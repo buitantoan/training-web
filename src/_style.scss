@@ -34,10 +34,10 @@ body{
 //buton get start now
 .__btn-get-start-now{
     background-color:  #7567F8;
+    // padding: 18px 32px;
     width: 209px;
     height: 68px;
     text-align: center;
-    // padding: 23px 39px;
     border: 5px solid #7567F8;
     outline: none;
     color: #FFFFFF;
@@ -54,7 +54,8 @@ body{
             color: #7567f8;
         }
     @media screen and (max-width: $break-large-laptop){
-        width: 156.75px;
+        // padding: 13.5px 24px;
+        width: 156px;
         height: 51px;
         font-size: 10px;
         border: 4px solid #7567F8;
@@ -64,8 +65,6 @@ body{
             }
     }
     @media screen and (max-width: $break-large-tablet){
-        width: 130px;
-        height: 38px;
         font-size: 10px;
         border: 3px solid #7567F8;
 
@@ -74,6 +73,8 @@ body{
             }
     }
     @media screen and (max-width: $break-large-phone){
+        width: 124px;
+        height: 40px;
         border: 2px solid #7567F8;
 
             &:hover{
@@ -146,12 +147,12 @@ body{
             line-height: 45px;
         }
         @media screen and (max-width: $break-media-laptop){
-            font-size: 27px;
+            font-size: 26px;
             line-height: 45px;
         }
-        // @media screen and (max-width: $break-large-tablet){
-        //     font-size: 20px;
-        // }
+        @media screen and (max-width: $break-large-tablet){
+            line-height: 40px;
+        }
     }
 }
 //
@@ -408,11 +409,11 @@ header{
                                 width: 80px;
 
                                 @media screen and (max-width: $break-media-phone){
-                                    width: 72px;
+                                    width: 60px;
 
                                     img{
-                                        width: 30px;
-                                        height: 35px;
+                                        width: 24px;
+                                        height: 30px;
                                     }
                                 }
                             }
@@ -536,11 +537,12 @@ header{
                             margin-bottom: 10px;
 
                             @media screen and (max-width: $break-large-laptop){
-                                font-size: 12px;
+                                font-size: 11px;
                                 font-weight: 600;
+                                margin-bottom: 8px;
                             }
                             @media screen and (max-width: $break-large-tablet){
-                                font-size: 10px;
+                                font-size: 8px;
                                 margin-bottom: 5px;
                             }
                         }
@@ -661,13 +663,13 @@ header{
             top: -160px;
 
             @media screen and (max-width: $break-large-laptop){
-                top: 0;
+                top: -10px;
             }
             @media screen and (max-width: $break-large-tablet){
-                margin-top: 40px;
+                margin-top: 30px;
             }
             @media screen and (max-width: $break-large-phone){
-                margin-top: 50px;
+                margin-top: 80px;
             }
             a{             
 
@@ -681,8 +683,8 @@ header{
                         height: 40px;
                     }
                     @media screen and (max-width: $break-large-tablet){
-                        width: 28px;
-                        height: 28px;
+                        width: 30px;
+                        height: 30px;
                     }            
                 }
             }
@@ -694,7 +696,16 @@ header{
     margin-top: -90px;
 
     @media screen and (max-width: $break-large-laptop) {
-        margin-top: 20px;
+        margin-top: -10px;
+    }
+    @media screen and (max-width: $break-media-laptop) {
+        margin-top: 75px;
+    }
+    @media screen and (max-width: $break-large-tablet) {
+        margin-top: 60px;
+    }
+    @media screen and (max-width: $break-large-phone) {
+        margin-top: 10px;
     }
 
     .__service{
@@ -715,9 +726,9 @@ header{
         }
             .__title{
                 text-align: center;
-                margin: 59px 0;
+                margin-bottom: 59px;
                 @media screen and (max-width: $break-large-phone){
-                    margin: 40px 0;
+                    margin-bottom: 40px;
                 }   
                     
             }
@@ -729,9 +740,12 @@ header{
                 @media screen and (max-width: $break-large-laptop){
                     grid-gap: 20px;
                 }
+                @media screen and (max-width: $break-large-tablet) {
+                    grid-gap: 16px;
+                }
                 @media screen and (max-width: $break-large-phone){
                     grid-template-columns: 1fr ;
-                    grid-gap: 15px;
+                   
                 }   
 
                     .__s-content{
@@ -841,8 +855,6 @@ header{
                     }  
                         .__digital-main{
                            font-family: 'DM Sans'; 
-
-                            
 
                             .__digital-content{
                                 margin: 16px 0 57px 0;
@@ -972,11 +984,24 @@ header{
                 /* identical to box height, or 72px */
                 color: #FFFFFF;
                 margin-bottom: 19px;
+                span{
+                    font-size: 40px;
+                }
                 @media screen and (max-width: $break-large-laptop){
-                    font-size: 42px;
+                    font-size: 60px;
+                    margin-bottom: 14px;
+                    line-height: 50px;
+
+                    span{
+                        font-size: 30px;
+                    }
                 }
                 @media screen and (max-width: $break-large-phone){
-                    font-size: 30px;
+                    font-size: 36px;
+                    margin-bottom: 0;
+                    span{
+                        font-size: 18px;
+                    }
                 }
             }
             p:nth-child(2){
@@ -986,6 +1011,7 @@ header{
                 /* identical to box height, or 31px */
                 color: #FFFFFF;
                 margin-bottom: 3px;
+
                 @media screen and (max-width: $break-large-laptop){
                     font-size: 16px;
                 }
@@ -995,6 +1021,7 @@ header{
                 line-height: 129%;
                 /* identical to box height, or 21px */
                 color: #FFFFFF;
+
                 @media screen and (max-width: $break-large-laptop){
                     font-size: 13px;
                 }
@@ -1048,6 +1075,7 @@ header{
                     }
                     @media screen and (max-width: $break-large-tablet) {
                         margin: 40px 0 38px;
+                        grid-gap: 16px;
                     }
                     @media screen and (max-width: $break-large-phone){
                         grid-template-columns: 1fr 1fr;
@@ -1249,6 +1277,9 @@ header{
                             @media screen and (max-width: $break-large-laptop){
                                 margin: 0 10px; 
                             }
+                            @media screen and (max-width: $break-large-phone){
+                                margin: 0 ; 
+                            }
 
                             .__review-item{   
                                 padding: 44px 60px 44px 67px;                             
@@ -1386,6 +1417,7 @@ header{
                                             }
                                             
                                             .__review-meta-info-star{
+                                                margin-top: 3px;
                                                 display: flex;
                                                 align-self: flex-start;
 
@@ -1478,7 +1510,7 @@ header{
                                     height: 285px;
 
                                     @media screen and (max-width: $break-large-laptop){
-                                        height: 215px;
+                                        height: 230px;
                                     }
                                     @media screen and (max-width: $break-large-phone){
                                         height: auto;
@@ -1613,7 +1645,10 @@ header{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    
+                    @media screen and (max-width: $break-large-phone){
+                        margin-bottom: 10px; 
+                    }
+
                     .__ready-img{
                         width: 112px;
                         height: 112px;
@@ -1663,7 +1698,7 @@ header{
                             color: #222222;
 
                             @media screen and (max-width: $break-large-laptop){
-                                font-size: 28px;
+                                font-size: 27px;
                             }
                             @media screen and (max-width: $break-large-tablet){
                                 font-size: 18px;
@@ -1727,7 +1762,7 @@ header{
     background-position: 50% -98%;
 
     @media screen and (max-width: $break-large-laptop){
-        background-position: 50% -188%;
+        background-position: 50% -134%;
     }
 
         .__pricing-wrap{
@@ -1739,25 +1774,25 @@ header{
 
             @media screen and (max-width: $break-large-laptop){
                 width: $wrap-large-laptop;
-                padding: 87px 0 90.75px;
+                padding: 87px 0 90px;
             }
             @media screen and (max-width: $break-media-laptop) {
                 width: $wrap-media-laptop;
-                padding: 61px 0 64.5px;
+                padding: 61px 0 64px;
             }
             @media screen and (max-width: $break-large-tablet){
                 width: $wrap-large-tablet;
-                padding: 46.4px 16px 48.4px;
+                padding: 46px 16px 48px;
             }
                 .__title{
                     margin-bottom: 59px;
                     text-align: center;
 
                     @media screen and (max-width: $break-large-laptop){
-                        margin-bottom: 44.25px;
+                        margin-bottom: 44px;
                     }
                     @media screen and (max-width: $break-media-laptop){
-                        margin-bottom: 31.47px;
+                        margin-bottom: 31px;
                     }
 
                 }
@@ -1768,43 +1803,44 @@ header{
                     grid-gap: 30px;
 
                     @media screen and (max-width: $break-large-laptop){
-                        grid-gap: 22.5px;
+                        grid-gap: 18px;
                         
                     }
                     @media screen and (max-width: $break-large-phone){
                         grid-template-columns: 1fr;
-                        grid-gap: 18px;
+                       
                     }
                     
                         ._pricing-content{   
-                            position: relative;                        
+                            position: relative;             
                             text-align: left;
                             padding: 38px 70px 54px 71px;
                             border: 5px solid #7567F8;
                             background-color: #FFFFFF;
                        
                             @media screen and (max-width: $break-large-laptop){
-                                padding: 28.5px 56.25px 40.5px 57px;
+                                padding: 28px 42px 40px ;
                                 border: 4px solid #7567F8;
                             }
                             @media screen and (max-width: $break-media-laptop){
-                                padding: 20.3px 37.3px 28.8px 37.9px;
+                                padding: 20px 37px 28px 37px;
                             }
                             @media screen and (max-width: $break-large-phone){
-                                // padding: 15.2px 30px 23.6px 30.04px;
-                                margin:0 auto;
+                                padding: 20px 52px 40px ;
+                                margin:0 32px;
                                 display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                
+                                flex-direction: column;         
+                            }
+                            @media screen and (max-width: $break-media-phone){
+                                margin:0;
                             }
                                 .__pricing-money{
                                     margin-bottom: 35px;
                                     @media screen and (max-width: $break-large-laptop){
-                                        margin-bottom: 26.25px;
+                                        margin-bottom: 25px;
                                     }
                                     @media screen and (max-width: $break-media-laptop){
-                                        margin-bottom: 18.66px;
+                                        margin-bottom: 18px;
                                     }
 
                                     p:nth-child(1){
@@ -1822,17 +1858,24 @@ header{
                                             line-height: 24px;
 
                                             span{
-                                                font-size: 37.5px;
+                                                font-size: 36px;
                                           
                                             }
                                         }
                                         @media screen and (max-width: $break-media-laptop){
-                                            font-size: 12.8px;
+                                            font-size: 14px;
                                             line-height: 24px;
 
                                             span{
-                                                font-size: 24px;
+                                                font-size: 28px;
                                           
+                                            }
+                                        }
+                                        @media screen and (max-width: $break-large-phone){
+                                            font-size: 20px;
+
+                                            span{
+                                                font-size: 36px;                                        
                                             }
                                         }
                                     }
@@ -1851,6 +1894,9 @@ header{
                                             margin: 10px 0 9px;
                                            
                                         }
+                                        @media screen and (max-width: $break-large-phone){
+                                            font-size: 13px;
+                                        }
                                     }
                                     p:nth-child(3){
                                         font-size: 24px;                                     
@@ -1859,10 +1905,13 @@ header{
                                         color: #222222;
 
                                         @media screen and (max-width: $break-large-laptop){
-                                            font-size: 18px;
+                                            font-size: 17px;
                                         }
                                         @media screen and (max-width: $break-media-laptop){
-                                            font-size: 13px;
+                                            font-size: 15px;
+                                        }
+                                        @media screen and (max-width: $break-large-phone){
+                                            font-size: 20px;
                                         }
                                     }
                                 }
@@ -1870,16 +1919,15 @@ header{
                                     margin-bottom: 106px;
                                     display: flex;
                                     flex-direction: column;
-                                    // align-items: flex-start;
+
                                     @media screen and (max-width: $break-large-laptop){
-                                        margin-bottom: 80.25px;
+                                        margin-bottom: 82px;
                                     }
 
                                         p{
                                             font-size: 16px;
                                             line-height: 35px;
                         
-
                                             &::before{
                                                 content: '\f152 ';
                                                 position: relative;
@@ -1890,16 +1938,43 @@ header{
                                             }
 
                                             @media screen and (max-width: $break-large-laptop){
-                                                font-size: 12px;                                             
+                                                font-size: 12px; 
+                                                line-height: 30px;
+
+                                                &::before{
+                                                    margin-right: 8px;
+                                                    
+                                                }
+                                            }
+                                            @media screen and (max-width: $break-media-laptop){
+                                                font-size: 13px; 
+                                            }
+                                            @media screen and (max-width: $break-large-phone){
+                                                font-size: 14px;
                                             }
                                         }
                                 }
                                 .__pricing-now{
-                                    position: absolute;
-                                    bottom: 54px;
+                                    position: absolute; 
+                                    bottom: 59px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                     @media screen and (max-width: $break-large-laptop){
-                                        bottom: 40.05px;                                        
+                                        bottom: 43px;                                        
                                     }
+                                    @media screen and (max-width: $break-media-laptop){
+                                        bottom: 31px;                                        
+                                    }
+                                    @media screen and (max-width: $break-large-phone){
+                                        bottom: 40px;
+
+                                        button{
+                                            width: 194px;
+                                            height: 51px;
+                                            font-size: 14px;
+                                        }                                        
+                                    }
+                                                                    
                                 }
                             &:hover{
                                 transition: 0.4s ease-in-out;
@@ -2176,13 +2251,21 @@ header{
                             }
                                 p{
                                     color: #FFFFFF;
-                                    font-size: 15px;
                                     margin-bottom: 12px;
                                     letter-spacing: 0.435em;
+                                    @media screen and (max-width: $break-large-laptop){
+                                        font-size: 11.25px;
+                                    }
                                 }
                                 h2{
                                     color: #FFFFFF;
                                     line-height: 60px;
+                                    @media screen and (max-width: $break-large-laptop){
+                                        line-height: 50px;
+                                    }
+                                    @media screen and (max-width: $break-large-tablet){
+                                        line-height: 40px;
+                                    }
                                 }
                         }
 
@@ -2591,9 +2674,12 @@ footer{
                                     position: relative;
                                 }
                                 span{
+                                    background-color: #FFFFFF;
+                                    padding: 18.5px 25px;
+                                    margin-right: 1px;
                                     position: absolute;
-                                    top: 50%;
-                                    right: 10%;
+                                    top: 48%;
+                                    right: 0;
                                     transform: translate(0,-50%);
                                     color: #6253EE;
                                 }
@@ -2620,7 +2706,12 @@ footer{
                                 @media screen and (max-width: $break-large-laptop){
                                     input{
                                         font-size: 12px;
-                                        padding: 14px 20px;
+                                        padding: 15px 20px;
+                                    }
+                                    span{
+                                        padding: 12px 18px;
+                                        top: 50%;
+                                        transform: translate(0,-50%);
                                     }
                                     .btn-newsletter{
                                         margin-top: 10px;
@@ -2629,9 +2720,7 @@ footer{
                                     }
                                 }
                                 @media screen and (max-width: $break-large-tablet){
-                                    input{
-                                        padding: 15px 20px;
-                                    }
+
                                     .btn-newsletter{
                                         font-size: 11px;
                                         letter-spacing: 0;
@@ -2762,7 +2851,18 @@ footer{
                     transform: translateX(calc(100% - 340px));
                 }
             }
-                    
+            @media screen and (max-width: $break-small-phone){
+                width: 100% ;
+                left: 0;
+                @keyframes toright {
+                    from{
+                        transform: translateX(100%);
+                    }
+                    to{
+                        transform: translateX(0);
+                    }
+                }
+            }        
                 .__modal-menu-main{ 
                     width: 100%;                         
                     display: flex;
