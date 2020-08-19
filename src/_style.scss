@@ -663,13 +663,16 @@ header{
             top: -160px;
 
             @media screen and (max-width: $break-large-laptop){
+                top: -80px;
+            }
+            @media screen and (max-width: $break-media-laptop){
                 top: -10px;
             }
             @media screen and (max-width: $break-large-tablet){
                 margin-top: 30px;
             }
             @media screen and (max-width: $break-large-phone){
-                margin-top: 80px;
+                margin-top: 50px;
             }
             a{             
 
@@ -693,19 +696,19 @@ header{
 }
 .__services{
     width: 100%;
-    margin-top: -90px;
+    margin-top: -30px;
 
     @media screen and (max-width: $break-large-laptop) {
-        margin-top: -10px;
+        margin-top: 20px;
     }
     @media screen and (max-width: $break-media-laptop) {
-        margin-top: 75px;
+        margin-top: 80px;
     }
     @media screen and (max-width: $break-large-tablet) {
         margin-top: 60px;
     }
     @media screen and (max-width: $break-large-phone) {
-        margin-top: 10px;
+        margin-top: 40px;
     }
 
     .__service{
@@ -1417,7 +1420,7 @@ header{
                                             }
                                             
                                             .__review-meta-info-star{
-                                                margin-top: 3px;
+                                                margin-top: 8px;
                                                 display: flex;
                                                 align-self: flex-start;
 
@@ -1698,7 +1701,7 @@ header{
                             color: #222222;
 
                             @media screen and (max-width: $break-large-laptop){
-                                font-size: 27px;
+                                font-size: 26px;
                             }
                             @media screen and (max-width: $break-large-tablet){
                                 font-size: 18px;
@@ -1736,6 +1739,13 @@ header{
                         color: #7567F8;
                         border: 5px solid #7567F8;
                         margin-right: 17px;
+                        transition: 0.3s ease;
+
+                        &:hover{
+                            
+                            background-color: #7567F8;
+                            color: #FFFFFF;
+                        }
 
                         @media screen and (max-width: $break-large-laptop){
                             font-size: 10.05px;
@@ -1744,7 +1754,6 @@ header{
                             border: 4px solid #7567F8;
                         }
                         @media screen and (max-width: $break-large-tablet){
-                            padding: 10px 30px;
                             border: 3px solid #7567F8;
                         }
                         
@@ -1762,7 +1771,7 @@ header{
     background-position: 50% -98%;
 
     @media screen and (max-width: $break-large-laptop){
-        background-position: 50% -134%;
+        background-position: 50% -132%;
     }
 
         .__pricing-wrap{
@@ -1977,9 +1986,8 @@ header{
                                                                     
                                 }
                             &:hover{
-                                transition: 0.4s ease-in-out;
+                                transition: 0.4s linear;
                                 background-color: #7567F8;
-                                color: white;
                             
                                     .__pricing-money{
                                         p{
@@ -1988,6 +1996,7 @@ header{
                                     }
                                     .__pricing-service{
                                         p{
+                                            color: white;
                                             &::before{
                                                 color: white;
                                             }
@@ -2421,7 +2430,6 @@ header{
                                             }
                                             .submit{
                                                 font-size: 12px;
-                                                letter-spacing: 1px;
                                             }
                                         }
                                 }
@@ -2716,14 +2724,12 @@ footer{
                                     .btn-newsletter{
                                         margin-top: 10px;
                                         font-size: 13px;
-                                        letter-spacing: 1px;
                                     }
                                 }
                                 @media screen and (max-width: $break-large-tablet){
 
                                     .btn-newsletter{
                                         font-size: 11px;
-                                        letter-spacing: 0;
                                     }
                                     
                                 }
