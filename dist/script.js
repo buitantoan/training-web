@@ -29,10 +29,12 @@
         arrows: false,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 620,
                 settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
+                    centerMode: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true
                 }
             }
         ]

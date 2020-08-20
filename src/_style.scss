@@ -3,12 +3,13 @@
 $wrap: 90%;
 $wrap-large-laptop: 61%;
 $wrap-media-laptop: 80%;
+$wrap-small-laptop: 90%;
 $wrap-large-tablet: 100%;
 $XL : 1170px;
 $break-small-phone: 320px;
 $break-media-phone: 375px;
 $break-large-phone: 480px;
-$break-small-tablet: 600px;
+$break-media-tablet: 600px;
 $break-large-tablet: 768px;
 $break-small-laptop: 860px;
 $break-media-laptop: 1024px;
@@ -57,7 +58,7 @@ body{
         // padding: 13.5px 24px;
         width: 156px;
         height: 51px;
-        font-size: 10px;
+        font-size: 11px;
         border: 4px solid #7567F8;
 
             &:hover{
@@ -65,7 +66,9 @@ body{
             }
     }
     @media screen and (max-width: $break-large-tablet){
-        font-size: 10px;
+        width: 140px;
+        height: 44px;
+        font-size: 9.5px;
         border: 3px solid #7567F8;
 
             &:hover{
@@ -102,11 +105,11 @@ body{
         color: #3425c0;
     }
     @media screen and (max-width: $break-large-laptop){
-        font-size: 12px;
+        font-size: 11px;
         margin-left: 24px;
     }
     @media screen and (max-width: $break-large-tablet){
-        font-size: 10px;
+        font-size: 9.5px;
         margin-left: 13px;
     }
 
@@ -129,7 +132,8 @@ body{
             font-size: 15px;
         }      
         @media screen and (max-width: $break-media-laptop){
-            font-size: 10.75px;
+            font-size: 10.5px;
+            margin-bottom: 4px;
         }  
         // @media screen and (max-width: $break-large-tablet){
         //     font-size: 8px;
@@ -148,10 +152,10 @@ body{
         }
         @media screen and (max-width: $break-media-laptop){
             font-size: 26px;
-            line-height: 45px;
+            line-height: 40px;
         }
         @media screen and (max-width: $break-large-tablet){
-            line-height: 40px;
+            line-height: 36px;
         }
     }
 }
@@ -172,7 +176,7 @@ header{
     }
     @media screen and (max-width: $break-large-phone){
         grid-template-columns: 227px 1fr;
-        grid-template-rows: 54px;
+        grid-template-rows: 60px;
     }
 
     .__join-us{
@@ -302,6 +306,19 @@ header{
                         flex-basis: 100%;
                         flex-direction: row;
                     }
+                    @media screen and (max-width: $break-media-tablet){
+                        flex-direction: column;
+                        div{
+
+                            a{
+                                font-size: 12px;
+                                margin-left: 0;
+                            }
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
                     
             }
         }
@@ -384,7 +401,7 @@ header{
 
                         a{
                             @media screen and (max-width: $break-media-phone){
-                                margin-right: 10px;
+                                margin-right: 15px;
                             }
                         }
                         button{
@@ -420,6 +437,10 @@ header{
                             p{
                                 margin: 0 48px 0 44px;
                                 font-size: 13px;
+                                @media screen and (max-width: $break-media-tablet){
+                                    margin: 0 20px;
+                                    font-size: 11px;
+                                }
                                 @media screen and (max-width: $break-large-phone){
                                     margin: 0 18px 0 14px;
                                 }
@@ -482,7 +503,10 @@ header{
                 }  
                 @media screen and (max-width: $break-large-tablet){
                     top: -39px;
-                }           
+                } 
+                @media screen and (max-width: $break-media-tablet){
+                    top: -30px;
+                }          
             }
             
             @media screen and (max-width: $break-large-phone){
@@ -495,13 +519,16 @@ header{
             position: relative;
             top: 155px;
             @media screen and (max-width: $break-large-laptop){
-                top: 116.25px;
+                top: 116px;
             }
             @media screen and (max-width: $break-media-laptop){
-                top: 82.66px;
+                top: 80px;
             }
             @media screen and (max-width: $break-large-tablet){
                 top: 62px;
+            }
+            @media screen and (max-width: $break-media-tablet){
+                top: 32px;
             }
             @media screen and (max-width: $break-large-phone){
                 top: 0;
@@ -517,10 +544,26 @@ header{
                             width: 100%;
                             object-fit: cover;
                             cursor: pointer;
+                            @media screen and (max-width: $break-large-laptop){
+                                width: 90%;
+                                height: 90%;
+                            }
+                            @media screen and (max-width: $break-media-laptop){
+                                width: 96%;
+                                height: 96%;
+                            }
+                        }
+                        @media screen and (max-width: $break-large-laptop){
+                            left: 44%;
+                            transform: translate(-40%);
+                        }
+                        @media screen and (max-width: $break-large-laptop){
+                            left: 45%;
+                            transform: translate(-40%);
                         }
                         @media screen and (max-width: $break-large-phone){
-                            top: -40%;
-                            left: 20%;
+                            top: -50%;
+                            left: 18%;
                             transform: translate(-10%);
                         }
                 }
@@ -538,12 +581,15 @@ header{
 
                             @media screen and (max-width: $break-large-laptop){
                                 font-size: 11px;
-                                font-weight: 600;
                                 margin-bottom: 8px;
+                            }
+                            @media screen and (max-width: $break-media-laptop){
+                                font-size: 9.5px;
+                                margin-bottom: 6px;
                             }
                             @media screen and (max-width: $break-large-tablet){
                                 font-size: 8px;
-                                margin-bottom: 5px;
+                                margin-bottom: 4px;
                             }
                         }
                         h2{
@@ -558,10 +604,10 @@ header{
                                 font-size: 36px;
                             }
                             @media screen and (max-width: $break-media-laptop){
-                                font-size: 26px;
+                                font-size: 25.5px;
                             }
                             @media screen and (max-width: $break-large-tablet){
-                                font-size: 19px;
+                                font-size: 18px;
                             }
                         }
                 }
@@ -576,8 +622,14 @@ header{
                         }
 
                         @media screen and (max-width: $break-large-laptop){
+                            max-width: 338px;
                             p{
                                 font-size: 15px;
+                            }
+                        }
+                        @media screen and (max-width: $break-media-laptop){
+                            p{
+                                font-size: 13px;
                             }
                         }
                         @media screen and (max-width: $break-large-tablet){
@@ -668,6 +720,9 @@ header{
             @media screen and (max-width: $break-media-laptop){
                 top: -10px;
             }
+            @media screen and (max-width: $break-small-laptop) {
+                top: 30px;
+            }
             @media screen and (max-width: $break-large-tablet){
                 margin-top: 30px;
             }
@@ -704,8 +759,14 @@ header{
     @media screen and (max-width: $break-media-laptop) {
         margin-top: 80px;
     }
+    @media screen and (max-width: $break-small-laptop) {
+        margin-top: 90px;
+    }
     @media screen and (max-width: $break-large-tablet) {
         margin-top: 60px;
+    }
+    @media screen and (max-width: $break-media-tablet){
+        margin-top: 90px;
     }
     @media screen and (max-width: $break-large-phone) {
         margin-top: 40px;
@@ -722,6 +783,9 @@ header{
 
         @media screen and (max-width: $break-media-laptop) {
             width: $wrap-media-laptop;
+        }
+        @media screen and (max-width: $break-small-laptop) {
+            width: $wrap-small-laptop;
         }
         @media screen and (max-width: $break-large-tablet) {
             width: $wrap-large-tablet;
@@ -746,6 +810,9 @@ header{
                 @media screen and (max-width: $break-large-tablet) {
                     grid-gap: 16px;
                 }
+                @media screen and (max-width: $break-media-tablet){
+                    grid-template-columns: repeat(2, 1fr);
+                }
                 @media screen and (max-width: $break-large-phone){
                     grid-template-columns: 1fr ;
                    
@@ -767,7 +834,12 @@ header{
                             background-size: cover;
                             @media screen and (max-width: $break-large-laptop){
                                 width: 48px;
-                                height: 48px; 
+                                height: 48px;                             
+                            }
+                            @media screen and (max-width: $break-media-phone){
+                                position: relative;
+                                left: 50%;
+                                transform: translate(-50%, 0);
                             }
                             img{
                                 width: 62px;
@@ -794,6 +866,9 @@ header{
                                 @media screen and (max-width: $break-large-laptop){
                                     font-size: 14px;
                                 }
+                                @media screen and (max-width: $break-media-phone){
+                                    font-size: 15px;
+                                }
                             }
                             p{
                                 margin-top: 12px;
@@ -804,6 +879,9 @@ header{
                   
                                 @media screen and (max-width: $break-large-laptop){
                                     font-size: 12px;
+                                }
+                                @media screen and (max-width: $break-media-phone){
+                                    font-size: 13px;
                                 }
                             }
                         }
@@ -821,11 +899,15 @@ header{
     padding-top: 310px ;
 
     @media screen and (max-width: $break-large-laptop){
-        margin-top: -72px;
-        padding-top: 220px ;
+        margin-top: -82px;
+        padding-top: 232px ;
+    }
+    @media screen and (max-width: $break-media-laptop){
+        margin-top: -59px;
+        padding-top: 165px ;
     }
     @media screen and (max-width: $break-large-phone){
-        margin-top: -50px;
+        margin-top: -40px;
         padding-top: 120px ;
     }
         .__digital-plan{
@@ -849,9 +931,15 @@ header{
                     @media screen and (max-width: $break-media-laptop) {
                         width: $wrap-media-laptop;
                     }
+                    @media screen and (max-width: $break-small-laptop) {
+                        width: $wrap-small-laptop;
+                    }
                     @media screen and (max-width: $break-large-tablet) {
                         width: $wrap-large-tablet;
                         padding: 60px 16px;
+                    }
+                    @media screen and (max-width: $break-media-tablet){
+                        grid-gap: 10px;
                     }
                     @media screen and (max-width: $break-large-phone){
                         grid-template-columns: 1fr ;
@@ -907,13 +995,25 @@ header{
                                     display: flex;
                                     align-items: flex-start;
                                     flex-direction: column;
-                                    padding: 63px 86px;
+                                    padding: 238px 115px 63px 86px;
 
                                     @media screen and (max-width: $break-large-laptop){
-                                        padding: 40px 60px;
+                                        padding: 178px 86px 48px 64px;
+                                    }
+                                    @media screen and (max-width: $break-media-laptop){
+                                        padding: 170px 62px 50px 56px;
+                                    }
+                                    @media screen and (max-width: $break-large-tablet){                                                                                   
+                                        padding: 60px 56px;
+                                    }
+                                    @media screen and (max-width: $break-media-tablet){
+                                        padding: 56px 36px;
                                     }
                                     @media screen and (max-width: $break-large-phone){
-                                        padding: 90px 30px 20px;
+                                        padding: 176px 60px 60px;
+                                    }
+                                    @media screen and (max-width: $break-small-phone){
+                                        padding: 170px 30px 60px 50px;
                                     }
                                     button{
                                         text-align: left;
@@ -944,9 +1044,28 @@ header{
                                             }
                                         }
                                         @media screen and (max-width: $break-large-laptop){
+                                            margin-bottom: 16px ;
                                             img{
-                                                width: 64%;
-                                                height: 64%;
+                                                width: 75%;
+                                                height: 75%;                                              
+                                            }
+                                        }
+                                        @media screen and (max-width: $break-media-laptop){
+                                   
+                                            img{
+                                                width: 54%;
+                                                height: 54%;                                              
+                                            }
+                                        }
+                                        @media screen and (max-width: $break-media-tablet){
+                                            margin-bottom: 20px ;  
+                                        }
+                                        @media screen and (max-width: $break-large-phone){   
+                                            margin-bottom: 10px ;  
+
+                                            img{
+                                                width: 48%;
+                                                height: 48%;
                                             }
                                         }
 
@@ -958,7 +1077,13 @@ header{
                                         /* or 39px */
                                         color: #FFFFFF;
                                         @media screen and (max-width: $break-large-laptop){
-                                            font-size: 18px;
+                                            font-size: 22px;
+                                        }
+                                        @media screen and (max-width: $break-media-laptop){
+                                            font-size: 20px;
+                                        }
+                                        @media screen and (max-width: $break-large-tablet){
+                                            font-size: 17px;
                                         }
                                     }
                                 }
@@ -996,6 +1121,9 @@ header{
             @media screen and (max-width: $break-large-laptop){
                 padding: 73px 0;
             }
+            @media screen and (max-width: $break-media-tablet){
+                padding: 50px 0;
+            } 
             @media screen and (max-width: $break-large-phone){
                 padding: 40px 0;
             }
@@ -1019,6 +1147,15 @@ header{
                         font-size: 30px;
                     }
                 }
+                @media screen and (max-width: $break-media-tablet){
+                    font-size: 40px;
+                    margin-bottom: 8px;
+                    line-height: 40px;
+
+                    span{
+                        font-size: 20px;
+                    }
+                } 
                 @media screen and (max-width: $break-large-phone){
                     font-size: 36px;
                     margin-bottom: 0;
@@ -1026,6 +1163,7 @@ header{
                         font-size: 18px;
                     }
                 }
+
             }
             p:nth-child(2){
                 font-weight: bold;
@@ -1038,6 +1176,9 @@ header{
                 @media screen and (max-width: $break-large-laptop){
                     font-size: 16px;
                 }
+                @media screen and (max-width: $break-media-tablet){
+                    font-size: 14px;
+                } 
             }
             p:nth-child(3){
                 font-size: 16px;
@@ -1048,6 +1189,9 @@ header{
                 @media screen and (max-width: $break-large-laptop){
                     font-size: 13px;
                 }
+                @media screen and (max-width: $break-media-tablet){
+                    font-size: 12px;
+                } 
             }
         }
 
@@ -1076,10 +1220,14 @@ header{
             @media screen and (max-width: $break-media-laptop) {
                 width: $wrap-media-laptop;
             }
+            @media screen and (max-width: $break-small-laptop) {
+                width: $wrap-small-laptop;
+            }
             @media screen and (max-width: $break-large-tablet) {
                 width: $wrap-large-tablet;
                 padding: 60px 16px;
             }
+    
             @media screen and (max-width: $break-large-phone) {
                 padding: 45px 16px;
             }
@@ -1100,13 +1248,16 @@ header{
                         margin: 40px 0 38px;
                         grid-gap: 16px;
                     }
-                    @media screen and (max-width: $break-large-phone){
+                    @media screen and (max-width: $break-media-tablet){
                         grid-template-columns: 1fr 1fr;
+                    }
+                    @media screen and (max-width: $break-large-phone){
                         grid-gap: 10px;
                         margin: 25px 0 ;
                     } 
                     @media screen and (max-width: $break-media-phone){
                         grid-template-columns: 1fr ;
+                        grid-gap: 30px;
                     }
                     
                         .__our-work-content{
@@ -1172,9 +1323,12 @@ header{
                                             @media screen and (max-width: $break-large-laptop){
                                                 font-size: 18px;
                                             }
-                                            @media screen and (max-width: $break-large-phone){
+                                            @media screen and (max-width: $break-media-laptop){
                                                 font-size: 16px;
                                             }
+                                            // @media screen and (max-width: $break-large-phone){
+                                            //     font-size: 15px;
+                                            // }
 
                                         }
                                         p{
@@ -1186,6 +1340,12 @@ header{
                                             color: #555555;
 
                                             @media screen and (max-width: $break-large-laptop){
+                                                font-size: 13px;
+                                            }
+                                            @media screen and (max-width: $break-media-laptop){
+                                                font-size: 12px;
+                                            }
+                                            @media screen and (max-width: $break-media-phone){
                                                 font-size: 13px;
                                             }
                                         }
@@ -1210,27 +1370,29 @@ header{
 
             @media screen and (max-width: $break-large-laptop){
                 width: $wrap-large-laptop;
-                padding: 107px 0;
+                padding: 88px 0;
             }
 
             @media screen and (max-width: $break-media-laptop) {
+                padding: 64px 0;
                 width: $wrap-media-laptop;
+            }
+            @media screen and (max-width: $break-small-laptop) {
+                width: $wrap-small-laptop;
             }
             @media screen and (max-width: $break-large-tablet) {
                 width: $wrap-large-tablet;
-                padding: 80px 16px;
+                padding: 46px 16px;
             }
-            @media screen and (max-width: $break-large-phone) {
-                padding: 50px 16px;
-            }
+
                 .__title{
                     margin-bottom: 49px;
                     text-align: center;
                     @media screen and (max-width: $break-large-laptop){
-                        margin-bottom: 39px;
+                        margin-bottom: 36px;
                     }
                     @media screen and (max-width: $break-large-phone){
-                        margin-bottom: 30px;
+                        margin-bottom: 27px;
                     }
 
                 }
@@ -1292,6 +1454,12 @@ header{
 
                             
                         }
+                        
+                        @media screen and (max-width: $break-media-tablet){
+                            .slick-slide {
+                                width: 420px !important;
+                            }
+                        }
                         .__review-slide-item{
                             // flex: 1 calc(50% - 30px);
                             margin: 0 15px;
@@ -1310,14 +1478,21 @@ header{
                                 flex-direction: row; 
 
                                 @media screen and (max-width: $break-large-laptop){
-                                    padding: 26px 36px 26px 40px;   
+                                    padding: 33px 45px 33px 50px;   
                                 }
                                 @media screen and (max-width: $break-media-phone){
+                                    padding: 30px 41px 30px 45px;   
                                     display: flex;
                                     flex-direction: column;
                                 }
+                                @media screen and (max-width: $break-large-tablet){
+                                    padding: 27px 37px 27px 40px;   
+                                }
                                 @media screen and (max-width: $break-large-phone){
                                     padding: 30px 35px ;    
+                                }
+                                @media screen and (max-width: $break-small-phone){
+                                    padding: 25px 30px ;   
                                 }
                                 .__review-img{                                 
                                    margin-right: 30px;
@@ -1398,6 +1573,9 @@ header{
                                         @media screen and (max-width: $break-large-laptop){
                                             font-size: 12px;
                                         }
+                                        @media screen and (max-width: $break-large-phone){
+                                            font-size: 13px;
+                                        }
                                     }
                                     .__review-meta-info{
                                         display: flex;
@@ -1422,6 +1600,9 @@ header{
                                                     @media screen and (max-width: $break-large-laptop){
                                                         font-size: 14px;
                                                     }
+                                                    @media screen and (max-width: $break-large-phone){
+                                                        font-size: 15px;
+                                                    }
 
                                                     span{
                                                         font-weight: 500;
@@ -1434,6 +1615,9 @@ header{
                                                         @media screen and (max-width: $break-large-laptop){
                                                             font-size: 10px;
                                                             font-weight: 400;
+                                                        }
+                                                        @media screen and (max-width: $break-large-phone){
+                                                            font-size: 11px;
                                                         }
                                                     }
                                                 }
@@ -1451,9 +1635,18 @@ header{
                                                     /* or 17px */
                                                     color: #D7DB17;
 
-                                                    @media screen and (max-width: $break-large-laptop){
-                                                        font-size: 10px;
-                                                      
+                                                    
+                                                }
+                                                @media screen and (max-width: $break-large-laptop){
+                                                    margin-top: 4px;
+                                                   i{
+                                                    font-size: 10px;
+                                                   }
+                                                  
+                                                }
+                                                @media screen and (max-width: $break-large-phone){
+                                                    i{
+                                                        font-size: 11px;
                                                     }
                                                 }
                                             }
@@ -1490,6 +1683,9 @@ header{
             @media screen and (max-width: $break-media-laptop) {
                 width: $wrap-media-laptop;
             }
+            @media screen and (max-width: $break-small-laptop) {
+                width: $wrap-small-laptop;
+            }
             @media screen and (max-width: $break-large-tablet) {
                 width: $wrap-large-tablet;
                 padding: 60px 16px;
@@ -1514,16 +1710,17 @@ header{
                     grid-gap: 30px;
                    
                     @media screen and (max-width: $break-large-laptop){
-                        grid-gap: 10px;
-                        
+                        grid-gap: 10px;                   
+                    }
+                    @media screen and (max-width: $break-media-tablet){
+                        grid-template-columns: repeat(2,1fr);
+                        grid-gap: 16px;
                     }
                     @media screen and (max-width: $break-large-phone){
-                        grid-template-columns: repeat(2,1fr);
-                    }                
-                    @media screen and (max-width: $break-media-phone){
-                        grid-template-columns: 1fr;
+                        grid-template-columns: repeat(1,1fr);
+                        justify-items: center;
                         grid-gap: 30px;
-                    }
+                    }                
                         .__team-info{
  
 
@@ -1536,6 +1733,9 @@ header{
                                     @media screen and (max-width: $break-large-laptop){
                                         height: 230px;
                                     }
+                                    @media screen and (max-width: $break-media-tablet){
+                                        height: 100%;
+                                    } 
                                     @media screen and (max-width: $break-large-phone){
                                         height: auto;
                                     }
@@ -1600,7 +1800,7 @@ header{
                                         color: #222222;
 
                                         @media screen and (max-width: $break-large-laptop){
-                                            font-size: 18px;
+                                            font-size: 16.5px;
                                         }
                                     }
                                     p{
@@ -1613,7 +1813,7 @@ header{
                                         color: #7567F8;
 
                                         @media screen and (max-width: $break-large-laptop){
-                                            font-size: 13px;
+                                            font-size: 12px;
                                         }
                                     }
                                 }
@@ -1644,6 +1844,9 @@ header{
         }
         @media screen and (max-width: $break-media-laptop) {
             width: $wrap-media-laptop;
+        }
+        @media screen and (max-width: $break-small-laptop) {
+            width: $wrap-small-laptop;
         }
         @media screen and (max-width: $break-large-tablet) {
             width: $wrap-large-tablet;
@@ -1776,6 +1979,7 @@ header{
                         }
                         @media screen and (max-width: $break-large-tablet){
                             border: 3px solid #7567F8;
+                            padding: 11px 32px;
                         }
                         @media screen and (max-width: $break-large-phone){
                             padding: 10px 31.235px;
@@ -1814,6 +2018,9 @@ header{
                 width: $wrap-media-laptop;
                 padding: 61px 0 64px;
             }
+            @media screen and (max-width: $break-small-laptop) {
+                width: $wrap-small-laptop;
+            }
             @media screen and (max-width: $break-large-tablet){
                 width: $wrap-large-tablet;
                 padding: 46px 16px 48px;
@@ -1839,6 +2046,13 @@ header{
                     @media screen and (max-width: $break-large-laptop){
                         grid-gap: 18px;
                         
+                    }
+                    @media screen and (max-width: $break-large-tablet){
+                        grid-gap: 16px;                      
+                    }
+                    @media screen and (max-width: $break-media-tablet){
+                        justify-content: center;
+                        grid-template-columns: repeat(1, 320px);
                     }
                     @media screen and (max-width: $break-large-phone){
                         grid-template-columns: 1fr;
@@ -2007,7 +2221,7 @@ header{
                                         button{
                                             width: 194px;
                                             height: 51px;
-                                            font-size: 14px;
+                                            font-size: 13px;
                                         }                                        
                                     }
                                                                     
@@ -2065,6 +2279,9 @@ header{
         @media screen and (max-width: $break-media-laptop) {
             width: $wrap-media-laptop;
         }
+        @media screen and (max-width: $break-small-laptop) {
+            width: $wrap-small-laptop;
+        }
         @media screen and (max-width: $break-large-tablet){
             width: $wrap-large-tablet;
             padding: 60px 16px;
@@ -2088,6 +2305,9 @@ header{
                 @media screen and (max-width: $break-large-tablet){
                     width: $wrap-large-tablet;
                     margin: 40px 0 50px;
+                }
+                @media screen and (max-width: $break-media-tablet){
+                    grid-gap: 16px;
                 }
                 @media screen and (max-width: $break-large-phone){
                     grid-template-columns: 1fr;
@@ -2127,6 +2347,10 @@ header{
                                 @media screen and (max-width: $break-large-laptop){
                                     padding: 30px 32px 40px 56px;
                                 }
+                                @media screen and (max-width: $break-media-tablet) {
+                                    flex-direction: row;
+                                    padding: 25px 26px 30px 36px;
+                                }
                                 @media screen and (max-width: $break-large-phone){
                                     padding: 20px 30px;
                                 }
@@ -2157,8 +2381,11 @@ header{
                                                 height: 30px;
                                                 letter-spacing: 1px;
                                             }
+                                            @media screen and (max-width: $break-large-tablet){
+                                                font-size: 10px;                     
+                                            }
                                             @media screen and (max-width: $break-large-phone){
-                                                font-size: 10px;
+                                                font-size: 9.5px;
                                                 width: 90px;
                                                 height: 25px;
                                                 letter-spacing: 0;
@@ -2167,7 +2394,9 @@ header{
                                     }
                                     .__recent-meta{
                                         text-align: left;
-
+                                        @media screen and (max-width: $break-media-tablet) {
+                                          margin-top: 20px;
+                                        }
                                         .__recent-post-date{
                                             align-self: flex-start;
                                             
@@ -2199,9 +2428,13 @@ header{
                                             
                                             @media screen and (max-width: $break-large-laptop){
                                                 font-size: 18px;
-                                                font-weight: 500;
-                                                
-                                            }                                        
+                                                font-weight: 500;                                            
+                                            }
+                                            @media screen and (max-width: $break-media-tablet) {
+                                                font-size: 16px;
+                                                margin: 6px 0 14px;  
+                                            }
+                                                                                    
                                         }
                                         .__recent-author{
                                             display: flex;
@@ -2265,6 +2498,9 @@ header{
             @media screen and (max-width: $break-media-laptop) {
                 width: $wrap-media-laptop;
             }
+            @media screen and (max-width: $break-small-laptop) {
+                width: $wrap-small-laptop;
+            }
             @media screen and (max-width: $break-large-tablet){
                 width: $wrap-large-tablet;
                 padding: 60px 16px ;
@@ -2292,6 +2528,9 @@ header{
                                     @media screen and (max-width: $break-large-laptop){
                                         font-size: 11.25px;
                                     }
+                                    @media screen and (max-width: $break-media-laptop){
+                                        font-size: 9.5px;
+                                    }
                                 }
                                 h2{
                                     color: #FFFFFF;
@@ -2299,8 +2538,11 @@ header{
                                     @media screen and (max-width: $break-large-laptop){
                                         line-height: 50px;
                                     }
+                                    @media screen and (max-width: $break-media-laptop){
+                                        line-height: 42px;
+                                    }
                                     @media screen and (max-width: $break-large-tablet){
-                                        line-height: 40px;
+                                        line-height: 38px;
                                     }
                                 }
                         }
@@ -2378,6 +2620,9 @@ header{
                             @media screen and (max-width: $break-large-laptop){
                                 max-width:  340px;
                                 padding: 25px 30px 30px;
+                            }
+                            @media screen and (max-width: $break-media-phone){
+                                padding: 25px 25px 30px;
                             }
 
                                 .__form-marketing-title{
@@ -2529,6 +2774,9 @@ footer{
                 @media screen and (max-width: $break-media-laptop) {
                     width: $wrap-media-laptop;
                 }
+                @media screen and (max-width: $break-small-laptop) {
+                    width: $wrap-small-laptop;
+                }
                 @media screen and (max-width: $break-large-tablet){
                     width: $wrap-large-tablet;
                     padding: 0 16px;
@@ -2628,6 +2876,9 @@ footer{
                         .__link:nth-child(3){
                             grid-area: three;
                         }
+                    }
+                    @media screen and (max-width: $break-media-tablet){
+                        justify-items: center;
                     }
                     @media screen and (max-width: $break-large-phone){
                         display: flex;
