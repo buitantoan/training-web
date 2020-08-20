@@ -250,6 +250,9 @@ header{
                         @media screen and (max-width: $break-large-laptop){
                             left: calc(40%);
                         }
+                        @media screen and (max-width: $break-small-laptop){
+                            left: calc(46%);
+                        }
                     }
             }
             .__join{
