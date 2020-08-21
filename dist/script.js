@@ -30,11 +30,9 @@
         responsive: [
             {
                 breakpoint: 620,
-                settings: {
-                    centerMode: true,
+                settings: {                 
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    variableWidth: true
+                    slidesToScroll: 1,         
                 }
             }
         ]
@@ -86,11 +84,11 @@
         e.preventDefault();
         $('.search-box').addClass('active-search');
         $('body').addClass('hidden-body-scroll');
+   
     });
     $('.closebtn').click(function (e) {
         e.preventDefault();
-        $('.search-box').removeClass('active-search');
-   
+        $('#mySearch').removeClass('active-search');
     });
     $('#mySearch').click(function(e){
         e.preventDefault();
@@ -102,5 +100,25 @@
             $('body').removeClass('hidden-body-scroll');        
         }
     });
+    // Change percentage
+    $(window).scroll(function() {
+            
+        var funfacts = $('.__funfacts').offset().top -  $(window).height();
+        var positionTop = $(document).scrollTop();
 
+        if ( positionTop  > funfacts) {
+            var display = $('.__funfact-item p > span');
+            display.each(function(){
+                $(this).prop( 'Counter', 0 ).animate({
+                    Counter: parseInt($(this).data('count'))
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function(now) {
+                    $(this).text(Math.ceil(now));
+                    }
+                });   
+            });
+        }
+    });
 } )( window )
