@@ -3448,6 +3448,15 @@ div.active-search{
     left: 0;
     background-color: rgba(0,0,0, 0.9); 
     overflow-y: auto;
+    animation: toright 1s ease;
+    @keyframes toright {
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
 
     .search-main{
         width: 100%;
